@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Kí Học Viên</title>
+    <style>
+        h2,label{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form style="background-color: burlywood;width: 50%">
+        <h2 style="color: blue;background-color: antiquewhite"><b>Đăng Kí Học Viên</b></h2>
+        <label name="hovaten" value="">Họ Và Tên: <input type="text"name="hovaten" placeholder="Nhập Họ Và Tên"/></label><br><br>
+        <label name="ngasinh" value="">Ngày Sinh: <input style="margin-left: 3px" type="date" name="ngaysinh"/></label><br><br>
+        <label name="gioitinh" value="">Giới Tính: <input type="radio" name="1"value="" checked/>Nam<input type="radio" name="1"value=""/>Nữ</label><br><br>
+        <label name="diachi" value="">Địa Chỉ: <textarea style="margin-left: 20px" cols="20"rows="4"></textarea></label><br><br>
+        <label name="lop" value="">Lớp:
+            <select type="checkbox" name="lop"value=""style="width: 50px;margin-left: 45px">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </label><br><br>
+        <label name="email" value="">Email: <input style="margin-left: 32px" type="email" name="email"value=""placeholder="Nhập địa chỉ email"/></label><br><br>
+        <label name="dienthoai" value="">Điện Thọai: <input type="number" name="sodienthoai" value=""placeholder="Nhập số điện thoại"/></label><br><br>
+        <input type="submit" name="dăngki"value="Đăng Kí"style="margin-left: 180px"/> <button name="nhaplai"value="">Nhập Lại</button>
+    </form>
+</body>
+</html>

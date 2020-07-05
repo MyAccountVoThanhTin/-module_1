@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Tạo Form Láy Servey Khách Hàng</title>
+    <style>
+        table{
+            font-family: Arial;
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .dau{
+            text-align: left;
+        }
+        tr:nth-child(odd){background-color: burlywood}
+        tr:nth-child(even){background-color: white}
+    </style>
 </head>
 <body>
 <form method="post">
@@ -51,6 +67,37 @@
     <textarea cols="50" rows="6"placeholder="What features would you like to see in the new product."></textarea>
     <br>
     <br>
+    <label ><b>Please rate your level of agreement with the folowing statements</b></label><br>
+    <table>
+        <tr>
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly Agree</th>
+        </tr>
+        <tr>
+            <td class="dau">Our products are priced</td>
+            <td><input type="radio" name="1" value=""/><br><span>1</span></td>
+            <td><input type="radio" name="1" value=""/><br><span>2</span></td>
+            <td><input type="radio" name="1" value=""/><br><span>3</span></td>
+            <td><input type="radio" name="1" value=""/><br><span>4</span></td>
+        </tr>
+        <tr>
+            <td class="dau">Our products are high quality</td>
+            <td><input type="radio" name="2" value=""/><br><span>1</span></td>
+            <td><input type="radio" name="2" value=""/><br><span>2</span></td>
+            <td><input type="radio" name="2" value=""/><br><span>3</span></td>
+            <td><input type="radio" name="2" value=""/><br><span>4</span></td>
+        </tr>
+        <tr>
+            <td class="dau">Your would recommend our product to a friend or cowoker</td>
+            <td><input type="radio" name="3" value=""/><br><span>1</span></td>
+            <td><input type="radio" name="3" value=""/><br><span>2</span></td>
+            <td><input type="radio" name="3" value=""/><br><span>3</span></td>
+            <td><input type="radio" name="3" value=""/><br><span>4</span></td>
+        </tr>
+    </table>
     <input type="submit" name="sumit" value="Submit"/>
 </form>
 </body>
