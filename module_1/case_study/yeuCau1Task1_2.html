@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu Cầu 1 Task 1-2</title>
+</head>
+<body>
+    <script>
+        let name=prompt("input name : ");
+        let cmnd=prompt("input cmnd : ");
+        let birthday=prompt("input birthday : ");
+        let email=prompt("input email : ");
+        let address=prompt("input address : ");
+        let typeService=prompt("input typeService : ");
+        let typeRoom=prompt("input typeRoom : ");
+        let typeCustomer=prompt("input typeCustomer : ");
+        let discount=prompt("input discount : ");
+        let included=prompt("input included : ");
+        let renDays=prompt("input renDays : ");
+            let total=300*renDays*(1-discount/100);
+        alert("Tên : "+name
+            +"Số chứng minh: "+cmnd
+            + "Ngày Sinh : "+birthday
+            + "Email : "+email
+            + "Địa chỉ : "+address
+            + "Loại dịch vụ : "+typeService
+            + "Loại phòng : "+typeRoom
+            + "Loại khách hàng : "+typeCustomer
+            + "Giảm giá : "+discount
+            + "Số người : "+included
+            + "Số ngày thuê : "+renDays
+            + "Tổng tiền phải trả : "+total);
+    </script>
+</body>
+</html>
