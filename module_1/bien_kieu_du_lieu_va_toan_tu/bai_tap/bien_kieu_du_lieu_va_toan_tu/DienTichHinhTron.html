@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích Hình Tròn</title>
+</head>
+<body>
+    <label>Nhập bán kính hình tròn : <input type="text"name="banKinh"value=""id="r"/></label>
+    <br>
+    <br>
+    <input type="button"value="Diện tích là :"onclick="dienTich()"/><input type="text"id="ketQua"/>
+    <br>
+    <br>
+    <input type="button"value="Chu vi là :"onclick="chuVi()"/><input type="text"id="kQ"/>
+    <script>
+        const PI=3.14;
+        function dienTich() {
+            let r=document.getElementById("r").value;
+            let result=parseInt(r)*parseInt(r)*PI;
+            document.getElementById("ketQua").value=result;
+        }
+        function chuVi() {
+            let r=document.getElementById("r").value;
+            let result=2*parseInt(r)*PI;
+            document.getElementById("kQ").value=result;
+        }
+    </script>
+</body>
+</html>

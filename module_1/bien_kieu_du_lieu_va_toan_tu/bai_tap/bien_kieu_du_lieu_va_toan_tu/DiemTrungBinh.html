@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Trung Bình Điểm</title>
+</head>
+<body>
+<form>
+    <h2><b>Tính Điểm Trung Bình</b></h2>
+    <br>
+    <br>
+    <label>Nhập điểm môn Vật Lý<input type="text"id="inputVatLy"name="diemVatLy"value=""/></label>
+    <br>
+    <br>
+    <label>Nhập điểm môn Hóa<input type="text"id="inputHoa"name="diemHoa"value=""/></label>
+    <br>
+    <br>
+    <label>Nhập điểm môn Sinh<input type="text"id="inputSinh"name="diemSinh"value=""/></label>
+    <br>
+    <br>
+    <input type="button"value="Tổng điểm 3 môn là : "onclick="tongDiem()"/>
+    <input type="text"id="tong"/>
+    <br>
+    <br>
+    <input type="button"value="Điểm trung bình là :"onclick="trungBinh()"/>
+    <input type="text" id="tb"/>
+    <script>
+        let dLy,dHoa,dSinh,result;
+        function tongDiem() {
+            dLy=document.getElementById("inputVatLy").value;
+            dHoa=document.getElementById("inputHoa").value;
+            dSinh=document.getElementById("inputSinh").value;
+            result=parseInt(dLy)+parseInt(dHoa)+parseInt(dSinh);
+            document.getElementById("tong").value=result;
+        }
+        function trungBinh() {
+            dLy=document.getElementById("inputVatLy").value;
+            dHoa=document.getElementById("inputHoa").value;
+            dSinh=document.getElementById("inputSinh").value;
+            let kq = (parseInt(dLy)+parseInt(dSinh)+parseInt(dHoa))/3;
+            document.getElementById("tb").value=kq;
+        }
+    </script>
+</form>
+</body>
+</html>

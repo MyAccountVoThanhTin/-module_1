@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Độ C Sang Độ F</title>
+</head>
+<body>
+<form>
+    <input type="button"value="Độ C"onclick="chuyenF()"/><input type="text"id="doC"/>
+    <br>
+    <br>
+    <input type="button"value="Độ F"onclick="chuyenC()"/><input type="text"id="doF"/>
+    <script>
+        function chuyenF() {
+            let c;
+            c=document.getElementById("doC").value;
+            let result=parseInt(c)*5;
+            document.getElementById("doF").value=result;
+        }
+        function chuyenC() {
+            let f;
+            f=document.getElementById("doF").value;
+            let result=parseInt(f)/5;
+            document.getElementById("doC").value=result;
+        }
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+        <table>
+            <tr>
+                <th>Amuont</th>
+                <th>From Curency</th>
+                <th>To Currency</th>
+                <th></th>
+                <th></th>
+            </tr>
+                <td><input type="text"name="amount"id="number"/></td>
+                <td>
+                    <select id="from">
+                        <option value="VND"> VietNam</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="to">
+                        <option value="VND">VietNam</option>
+                        <option value="USD"value="2">USD</option>
+                        <option value="EURO" value="3">EURO</option>
+                    </select>
+                </td>
+                <td><input type="button"onclick="ketQua()"value="Convert"/></td>
+                <td>
+                    <input type="text"id="kQ"/>
+                </td>
+        </table>
+        <script>
+            function ketQua() {
+                let number,from,to,result;
+                number=document.getElementById("number").value;
+                from=document.getElementById("from").value;
+                to=document.getElementById("to").value;
+                if(to=="USD"){
+                    result=number/23000;
+                } else if(to=="EURO"){
+                        result=number/25000;
+                } else {
+                    result=number;
+
+                }
+                document.getElementById("kQ").value=result;
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Máy Tính</title>
+</head>
+<body>
+    <label>Nhập số đầu: <input type="text" id="first"/></label>
+    <br>
+    <br>
+    <label>Nhập số thứ hai: <input type="text" id="second"/></label>
+    <br>
+    <br>
+    <input type="button" onclick="cong()" value="Cộng"/><input type="text" id="cong"/>
+    <br>
+    <br>
+    <input type="button" onclick="tru()" value="Trừ"/><input type="text" id="tru"/>
+    <br>
+    <br>
+    <input type="button" onclick="nhan()" value="Nhân"/><input type="text" id="nhan"/>
+    <br>
+    <br>
+    <input type="button" onclick="chia()" value="Chia"/><input type="text" id="chia"/>
+    <script>
+        function cong() {
+            let frt,sed;
+            frt=document.getElementById("first").value;
+            sed=document.getElementById("second").value;
+            document.getElementById("cong").value=parseInt(frt)+parseInt(sed);
+        }
+        function tru() {
+            let frt,sed;
+            frt=document.getElementById("first").value;
+            sed=document.getElementById("second").value;
+            document.getElementById("tru").value=parseInt(frt)-parseInt(sed);
+        }
+        function nhan() {
+            let frt,sed;
+            frt=document.getElementById("first").value;
+            sed=document.getElementById("second").value;
+            document.getElementById("nhan").value=parseInt(frt)*parseInt(sed);
+        }
+        function chia() {
+            let frt,sed;
+            frt=document.getElementById("first").value;
+            sed=document.getElementById("second").value;
+            document.getElementById("chia").value=parseInt(frt)/parseInt(sed);
+        }
+    </script>
+</body>
+</html>
