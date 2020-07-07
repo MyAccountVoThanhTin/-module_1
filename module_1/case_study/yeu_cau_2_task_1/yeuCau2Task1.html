@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu Cầu 2 Task 1</title>
+</head>
+<body>
+    <script>
+        let name=prompt("input name : ");
+        let cmnd=prompt("input cmnd : ");
+        let birthday=prompt("input birthday : ");
+        let email=prompt("input email : ");
+        let address;
+        let chooseAddress=prompt("Nhấn 1 chọn Đà Nẵng : "
+            +"\n Nhấn 2 để chọn Huế"
+            +"\n Nhấn 3 để chọn Quảng Nam"
+            + "\n Nhấn số khác để chọn tự nhập"
+            );
+            let chAdd;
+            //chAdd tính giảm giá theo địa chỉ
+                switch (chooseAddress) {
+                    case '1' :address = "Đà Nẵng";chAdd = 20;break;
+                    case '2' :address = "Huế";chAdd = 10;break;
+                    case '3' :address = "Quảng Nam";chAdd = 5; break;
+                    default : address = prompt("Nhập tỉnh cần nhập : ");chAdd = 0;
+                }
+        let typeService,chSe;
+        let chService=prompt("Nhấn 1: Villa"
+            +"\n Nhấn 2: House"
+            +"\n Nhấn 3: Room"
+            );
+            switch (chService) {
+                case '1': typeService = "Villa";chSe = 500;break;
+                case '2': typeService = "House";chSe = 300;break;
+                case '3': typeService = "Room";chSe = 100;break;
+                default : typeService = alert("Loại khác");chSe = 0 ;
+            }
+        let typeRoom=prompt("input typeRoom : ");
+        let typeCustomer,chCus;
+        let chCustomer=prompt("Nhấn 1: Customer là Diamond "
+            + "\n Nhấn 2: Customer là Platium"
+            + "\n Nhấn 3: Customer là Gold"
+            + "\n Nhấn 4: Customer là Silver"
+            + "\n Nhấn 5: Customer là Member"
+            );
+            switch (chCustomer) {
+                case '1' : typeCustomer = "Diamond";chCus = 15;break;
+                case '2' : typeCustomer = "Platium";chCus = 10;break;
+                case '3' : typeCustomer = "Gold";chCus = 5;break;
+                case '4' : typeCustomer = "Silver";chCus = 2;break;
+                case '5' : typeCustomer = "Member";chCus = 0;break;
+                default :typeCustomer = alert("Loại khách hàng khác")
+            }
+        let discount=parseInt(prompt("input discount : "));
+        let included=prompt("input included : ");
+        let chDay;
+        let renDays=parseInt(prompt("input renDays : "));
+        //tính giảm giá theo ngày
+            if(renDays >=7){
+                chDay =30;
+            }else if(renDays >= 5){
+                chDay = 20;
+            }else if(renDays >= 2){
+                chDay = 10;
+            }else {chDay= 0;
+            }
+        //giảm giá theo năm sinh và tuổi
+        let currentYear = new Date().getFullYear();
+        let year = new Date(birthday).getFullYear();
+        let chAge;
+        let ageCustomer = currentYear - year;
+        if(ageCustomer >= 30 && address == "Đà Nẵng"){
+            chAge = 2;
+        }else if(ageCustomer >= 20 && address == "Đà Nẵng"){
+            chAge = 1;
+        }else  chAge = 0;
+        //tổng giảm giá
+        discount = discount +chDay + chAdd + chAge + chCus ;
+        let total =chSe*renDays*(1-(discount/100));
+        function show(){
+            document.writeln("Tên : "+name+ "<br/>");
+            document.writeln("cmnd : "+cmnd+ "<br/>");
+            document.writeln("Ngày sinh : "+birthday + "<br/>");
+            document.writeln("email : "+email+ "<br/>");
+            document.writeln("Địa chỉ "+address + "<br/>");
+            document.writeln("Loại dịch vụ  : "+typeService+"<br/>");
+            document.writeln("Loai phòng : "+typeRoom+"<br/>");
+            document.writeln("Loại khách hàng : "+typeCustomer + "<br/>");
+            document.writeln("giảm giá : "+discount + "<br/>");
+            document.writeln("Số người : "+included + "<br/>");
+            document.writeln("Số ngày thuê : "+renDays + "<br/>");
+            document.writeln("Tổng tiền trả : "+ total);
+        }
+        function edit(){
+            let choose = prompt("Nhấn 1 để sửa tên"
+                + "\n Nhấn 2 để sửa cmnd"
+                + "\n Nhấn 3 để sửa ngày sinh"
+                + "\n Nhấn 4 để sửa email"
+                + "\n Nhấn 5 để sửa address"
+                + "\n Nhấn 6 để sửa typeService"
+                + "\n Nhấn 7 để sửa typeRoom"
+                + "\n Nhấn 8 để sửa typeCustomer"
+                + "\n Nhấn 9 để sửa discount"
+                + "\n Nhấn 10 để sửa included"
+                + "\n Nhấn 11 để sửa renDays"
+            );
+            switch (choose) {
+                case '1':name = prompt("nhập lại tên : ");break;
+                case '2':cmnd = prompt("nhập lại cmnd : ");break;
+                case '3':birthday = prompt("nhập lại ngày sinh : ");break;
+                case '4':email = prompt("nhập lại email : ");break;
+                case '5':address = prompt("nhập lại address : ");break;
+                case '6':typeService = prompt("nhập lại typeService : ");break;
+                case '7':typeRoom = prompt("nhập lại typeRoom : ");break;
+                case '8':typeCustomer = prompt("nhập lại typeCustomer : ");break;
+                case '9':discount = prompt("nhập lại discount : ");break;
+                case '10':included = prompt("nhập lại included : ");break;
+                case '11':renDays = prompt("nhập lại renDays : ");break;
+            }
+        }
+        let choose = prompt("Nhấn 1 để show . Nhấn 2 để thay đổi thông tin");
+        switch (choose) {
+            case "1": show(); break;
+            case "2": edit();show(); break;
+        }
+    </script>
+</body>
+</html>
