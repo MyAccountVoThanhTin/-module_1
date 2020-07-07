@@ -10,6 +10,7 @@
         let cmnd=prompt("input cmnd : ");
         let birthday=prompt("input birthday : ");
         let email=prompt("input email : ");
+        // Chọn địa chỉ
         let address;
         let chooseAddress=prompt("Nhấn 1 chọn Đà Nẵng : "
             +"\n Nhấn 2 để chọn Huế"
@@ -24,6 +25,7 @@
                     case '3' :address = "Quảng Nam";chAdd = 5; break;
                     default : address = prompt("Nhập tỉnh cần nhập : ");chAdd = 0;
                 }
+        // chọn loại dịch vụ
         let typeService,chSe;
         let chService=prompt("Nhấn 1: Villa"
             +"\n Nhấn 2: House"
@@ -36,6 +38,7 @@
                 default : typeService = alert("Loại khác");chSe = 0 ;
             }
         let typeRoom=prompt("input typeRoom : ");
+        // Loại khách hàng
         let typeCustomer,chCus;
         let chCustomer=prompt("Nhấn 1: Customer là Diamond "
             + "\n Nhấn 2: Customer là Platium"
@@ -53,6 +56,7 @@
             }
         let discount=parseInt(prompt("input discount : "));
         let included=prompt("input included : ");
+        //số ngày thuê
         let chDay;
         let renDays=parseInt(prompt("input renDays : "));
         //tính giảm giá theo ngày
@@ -76,6 +80,7 @@
         }else  chAge = 0;
         //tổng giảm giá
         discount = discount +chDay + chAdd + chAge + chCus ;
+        //tỏng tiền phải trả
         let total =chSe*renDays*(1-(discount/100));
         function show(){
             document.writeln("Tên : "+name+ "<br/>");
