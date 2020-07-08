@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải PT</title>
+</head>
+<body>
+    <script>
+        let choose = prompt("Nhấn 1 để giải phương trình bậc 1 . Nhấn 2 để giải phương trình bậc 2 !");
+        switch (choose) {
+            case '1':
+                let a = parseInt(prompt("Nhập a : "));
+                let b = parseInt(prompt("Nhập b : "));
+                    if(a==0) {
+                        if (b == 0) {
+                            alert("Phương trình có vô số nghiệm !");
+                        } else alert("Phương trình vô nghiệm !");
+                    }else {
+                        let x = -b/a;
+                        alert("Phương trình có 1 nghiệm là : "+x);
+                    }
+                break;
+            case '2':
+                let a1 = parseInt(prompt("Nhập a : "));
+                let b1 = parseInt(prompt("Nhập b : "));
+                let c1 = parseInt(prompt("Nhập c : "));
+                let delta = b1*b1 - (4*a1*c1);
+                    if(delta < 0){
+                    alert("PT Vô Nghiệm !");
+                }else  if(delta === 0){
+                    let x = -b1/2*a1;
+                }else  {
+                    let x1= (-b1 + Math.sqrt(delta))/2*a1;
+                    let x2= (-b1 - Math.sqrt(delta))/2*a1;
+                    alert("Phương trình có 2 nghiệm là X1: "+x1+' '+ "X2"+ ' '+x2);
+                }
+                break;
+        }
+    </script>
+</body>
+</html>

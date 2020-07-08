@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông và chữ nhất</title>
+</head>
+<body>
+    <script>
+        let choose = prompt("Nhấn 1 để tính diện tích hình vuông . Nhấn 2 để tính diện tích hình chư nhật !");
+            switch (choose) {
+                case '1':
+                    let a = parseInt(prompt("Nhập cạnh : "));
+                    let s = a*a;
+                    alert("Diện tích hình vuông có cạnh : "+a+' '+"là"+' '+s);
+                    break;
+                case '2':
+                    let chDai = parseInt(prompt("Nhập chiều dài : "));
+                    let chRong = parseInt(prompt("Nhập chiều rộng : "));
+                    let dienTich = chDai * chRong ;
+                    alert("Diện tích hình vuông là "+dienTich);
+                    break;
+            }
+    </script>
+</body>
+</html>
