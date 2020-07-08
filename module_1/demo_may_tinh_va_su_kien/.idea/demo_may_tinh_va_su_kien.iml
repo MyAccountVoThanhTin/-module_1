@@ -10,5 +10,15 @@
     <orderEntry type="module" module-name="luyen_tap_switch_case" />
     <orderEntry type="module" module-name="uyen_tap_toan_tu_ba_ngon" />
     <orderEntry type="module" module-name="yeu_cau_2_task_1" />
+    <orderEntry type="module" module-name="thuc_hanh_su_kien_chuot" />
+    <orderEntry type="module" module-name="thuc_hanh_su_kien_ban_phim" />
+    <orderEntry type="module" module-name="tinh_chi_so_can_nang_co_the" />
+    <orderEntry type="module" module-name="may_tinh_don_gian" />
+    <orderEntry type="module" module-name="may_tinh" />
+    <orderEntry type="module" module-name="cau_lenh_switch_case" />
+    <orderEntry type="module" module-name="kiem_tra_nam_nhuan" />
+    <orderEntry type="module" module-name="do_you_love_me" />
+    <orderEntry type="module" module-name="ung_dung_cau_truc_dieu_kien_1" />
+    <orderEntry type="module" module-name="ung_dung_cau_truc_dieu_kien_2" />
   </component>
 </module>

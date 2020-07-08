@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự Kiện Bàn Phím</title>
+</head>
+<body onload="docReady()">
+    <img id="nobita" src="nobita.jpg" style="position: absolute ;top: 0px;left: 0px;width: 100px;height: 200px"/>
+    <script>
+        let press = document.getElementById("nobita");
+        function upArowPress() {
+            press = document.getElementById("nobita");
+            press.style.top = parseInt(press.style.position.top) - 10 + 'px';
+        }
+        function downArowPress() {
+            press = document.getElementById("nobita");
+            press.style.top = parseInt(press.style.position.top) + 10 + 'px';
+        }
+        function leftArowPress() {
+            press = document.getElementById("nobita");
+            press.style.left = parseInt(press.style.position.top) - 10 + 'px';
+        }
+        function rightArowPress() {
+            press = document.getElementById("nobita");
+            press.style.left = parseInt(press.style.position.top) + 10 + 'px';
+        }
+        let evt;
+        function moveSelection() {
+            switch (evt.keyCode) {
+                case  37 : leftArowPress();break;
+                case  39 : rightArowPress();break;
+                case  38 : upArowPress();break;
+                case  30 : downArowPress();break;
+            }
+        }
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
+    </script>
+</body>
+</html>

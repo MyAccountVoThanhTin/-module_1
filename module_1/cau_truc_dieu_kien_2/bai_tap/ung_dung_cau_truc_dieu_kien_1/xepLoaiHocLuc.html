@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại học lực</title>
+</head>
+<body>
+    <script>
+        let toanKT = parseInt(prompt("Nhập điểm kiem tra toán : "));
+        let toanGK = parseInt(prompt("Nhập điểm giữa kỳ toán : "));
+        let toanCK = parseInt(prompt("Nhập điểm cuối kỳ toán : "));
+        let tbToan = (toanKT+toanGK+toanCK)/3;
+        let vanKT = parseInt(prompt("Nhập điểm kiểm tra văn : "));
+        let vanGK = parseInt(prompt("Nhập điểm giữa kỳ văn : "));
+        let vanCK = parseInt(prompt("Nhập điểm cuối kỳ văn : "));
+        let tbVan = (vanKT+vanGK+vanCK)/3;
+        let anhKT = parseInt(prompt("Nhập điểm kiểm tra anh : "));
+        let anhGK = parseInt(prompt("Nhập điểm giữa kỳ anh : "));
+        let anhCK = parseInt(prompt("Nhập điểm cuối kỳ anh : "));
+        let tbAnh = (anhKT+anhGK+anhCK)/3;
+        let tbMon = (tbToan+tbVan+tbAnh)/3;
+        if(tbMon >= 8) {
+            alert("Điểm trung bình môn là : "+tbMon +" Xếp loại Giỏi");
+        }else if(tbMon >= 5.5 ){
+            alert("Điểm trung bình môn là : "+tbMon +" Xếp loại Khá");
+        }else if(tbMon > 3.5 ) {
+            alert("Điểm trung bình môn là : " + tbMon + " Xếp loại Trung Bình");
+        }else alert("Điểm trung bình môn là : "+tbMon +" Xếp loại Kém");
+    </script>
+</body>
+</html>

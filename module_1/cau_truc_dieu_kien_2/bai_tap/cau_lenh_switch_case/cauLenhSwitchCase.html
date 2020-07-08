@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu Lệnh Switch Case</title>
+</head>
+<body>
+    <label>Nhập tháng : <input type="text" id="thang" value=""/><input type="button" onclick="tinhNgay();" value="Tính số ngày"/></label><br><br>
+    <label>Số ngày là : <input type="text" id="kq"/></label>
+    <script>
+
+        function tinhNgay() {
+            let thang = document.getElementById("thang").value;
+            switch(thang) {
+                case '1':
+                case '3':
+                case '5':
+                case '7':
+                case '8':
+                case '10':
+                case '12':
+                    document.getElementById("kq").value ="Tháng"+ thang + "có 31 ngày";
+                    break;
+                case '4':
+                case '6':
+                case '9':
+                case '11':
+                    document.getElementById("kq").value="Tháng"+ thang + "có 30 ngày";
+                    break;
+                case '2':
+                    let isLeapYear;
+                    let year = document.writeln("Mời nhập số năm hiện tại");
+                    parseInt(year);
+                    if(year % 4 == 0){
+                        if(year % 100 == 0){
+                            if(year % 400 == 0){
+                                isLeapYear = true;
+                            }
+                        }else {
+                            isLeapYear = true;
+                        }
+                    }
+                    if(isLeapYear){
+                        document.getElementById("kq").value=year + "là năm nhuần và có 28 ngày";
+                    }else {
+                        document.getElementById("kq").value=year + "là năm khong nhuần và có 29 ngày";
+                    }
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

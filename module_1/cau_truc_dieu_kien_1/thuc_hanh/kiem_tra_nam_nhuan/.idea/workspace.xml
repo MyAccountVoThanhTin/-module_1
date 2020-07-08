@@ -1,4 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cab9339b-2860-4c6c-a1c0-ef84f22927ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/cau_lenh_switch_case/.idea/cau_lenh_switch_case.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/cau_lenh_switch_case/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/cau_lenh_switch_case/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/cau_lenh_switch_case/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/cau_lenh_switch_case/cauLenhSwitchCase.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/may_tinh/.idea/may_tinh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/may_tinh/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/may_tinh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/may_tinh/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/may_tinh/mayTinh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/tinh_chi_so_can_nang_co_the/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/tinh_chi_so_can_nang_co_the/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/tinh_chi_so_can_nang_co_the/.idea/tinh_chi_so_can_nang_co_the.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/tinh_chi_so_can_nang_co_the/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/bai_tap/tinh_chi_so_can_nang_co_the/tinhChiSoCanNangCothe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_ban_phim/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_ban_phim/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_ban_phim/.idea/thuc_hanh_su_kien_ban_phim.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_ban_phim/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_ban_phim/thucHanhSuKienBanPhim.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_chuot/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_chuot/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_chuot/.idea/thuc_hanh_su_kien_chuot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_chuot/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_dieu_kien_2/thuc_hanh/thuc_hanh_su_kien_chuot/thucHanhSuKienChuot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/~$seStudy_FuramaResort_Module1_final.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/demo_may_tinh_va_su_kien.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/demo_may_tinh_va_su_kien.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
   <component name="ProjectId" id="1eKwKEcIEfYl3oRuu1yXFMQF9kO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cab9339b-2860-4c6c-a1c0-ef84f22927ee" name="Default Changelist" comment="" />
+      <created>1594182518758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594182518758</updated>
+      <workItem from="1594182520069" duration="3000" />
+      <workItem from="1594182558596" duration="169000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
 </project>
