@@ -1,4 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76b23162-1ab4-4fea-9acc-6e45479530a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/do_while/.idea/do_while.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/do_while/dowhile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/lap_long_nhau/.idea/lap_long_nhau.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/lap_long_nhau/whileLongNhau.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_for/.idea/su_dung_vong_lap_for.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_for/bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_for/suDungVongLapFor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_while/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_while/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_while/.idea/su_dung_vong_lap_while.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_while/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_while/b2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cau_truc_lap_1/thuc_hanh/su_dung_vong_lap_while/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../demo/.idea/demo_may_tinh_va_su_kien.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cau_lenh_switch_case/cauLenhSwitchCase.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cau_lenh_switch_case/cauLenhSwitchCase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ung_dung_cau_truc_dieu_kien_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ung_dung_cau_truc_dieu_kien_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai6VaBai7PTBac1Va2.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai6VaBai7PTBac1Va2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/demo_may_tinh_va_su_kien.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/demo_may_tinh_va_su_kien.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/MayTinhNangCao.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/demoInnerHTMLVaTextHTML.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/demoInputAndDisplay.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/demoSuKienChuot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_may_tinh_va_su_kien/mayTinhDonGian.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
   <component name="ProjectId" id="1eOTZ4J47IWGFtf1hOZdHWU0JMw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../cau_truc_lap_2/bai_tap/so_nguyen_to" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76b23162-1ab4-4fea-9acc-6e45479530a5" name="Default Changelist" comment="" />
+      <created>1594215405696</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594215405696</updated>
+      <workItem from="1594215409227" duration="15000" />
+      <workItem from="1594256696966" duration="12266000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1594276722832">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594276722832" />
+  </component>
 </project>

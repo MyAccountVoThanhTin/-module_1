@@ -6,7 +6,7 @@
 </head>
 <body>
     <label>Nhập tháng : <input type="text" id="thang" value=""/><input type="button" onclick="tinhNgay();" value="Tính số ngày"/></label><br><br>
-    <label>Số ngày là : <input type="text" id="kq"/></label>
+    <label>Số ngày là : <input type="text" id="kq" style="width: 200px"/></label>\
     <script>
 
         function tinhNgay() {
@@ -29,8 +29,7 @@
                     break;
                 case '2':
                     let isLeapYear;
-                    let year = document.writeln("Mời nhập số năm hiện tại");
-                    parseInt(year);
+                    let year = parseInt(prompt("Mời nhập số năm hiện tại"));
                     if(year % 4 == 0){
                         if(year % 100 == 0){
                             if(year % 400 == 0){

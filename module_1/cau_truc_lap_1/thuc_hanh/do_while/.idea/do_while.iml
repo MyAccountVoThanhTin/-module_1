@@ -8,12 +8,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="su_dung_vong_lap_for" />
-    <orderEntry type="module" module-name="su_dung_vong_lap_while" />
-    <orderEntry type="module" module-name="do_while" />
-    <orderEntry type="module" module-name="lap_long_nhau" />
-    <orderEntry type="module" module-name="bang_cuu_chuong" />
-    <orderEntry type="module" module-name="so_nguyen_to" />
-    <orderEntry type="module" module-name="so_nguyen_to" />
   </component>
 </module>
