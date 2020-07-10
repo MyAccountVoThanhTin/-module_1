@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("nhạp n : "));
+        let i,j;
+        //tam giac 1
+        for ( i = 1; i <= n; i++) {
+            for ( j = 1; j <= i; j++) {
+                document.writeln("*");
+                if (j == i) {
+                    document.writeln("<br>");
+                }
+
+            }
+        }
+        document.writeln("<br>");
+        //tam giac 2
+        for ( i = 1; i <= n; i++) {
+            for (j = n; j >= i; j--) {
+                document.writeln("*");
+                if (j == i) {
+                    document.writeln("<br>");
+                }
+            }
+        }
+        document.writeln("<br>");
+        // tam giac 3
+        for(i = n; i>=1;i--){
+           for(j = 1;j<=n;j++){
+               if(j<i){
+                   document.writeln("\xa0\xa0");
+               }else document.writeln("*");
+               if(j==n){
+                   document.writeln("<br>");
+               }
+              }
+        }
+        document.writeln("<br>");
+        //tam giac 4
+        for(i = n;i>=1;i--){
+            for(j = 1;j<=i;j++){
+                if(j<=i){
+                    document.writeln("*");
+                }
+                if(j==i){
+                    document.writeln("<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

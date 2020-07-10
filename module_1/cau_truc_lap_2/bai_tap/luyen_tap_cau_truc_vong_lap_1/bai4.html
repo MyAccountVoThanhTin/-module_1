@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+    <script>
+        let n1 = 0;
+        let n2 = 1;
+        let n3;
+        let n = prompt("Nhập số phần tử trong dãy fibonacy : ");
+        //document.writeln(n1 + "<br>");
+        //document.writeln(n2 + "<br>");
+        for(let i =2 ; i< n ;i++){
+            n3 = n1 + n2 ;
+           // document.writeln(n3 + "<br>");
+            n1 = n2 ;
+            n2 = n3 ;
+            if(n3 % 5 ==0){
+                document.writeln(n3);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

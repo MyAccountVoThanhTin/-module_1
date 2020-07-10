@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+
+    <button id="play" onclick="play()">Play</button>
+    <br>
+    <br>
+    <input type="reset"value="playagain"/>
+    <br>
+    <br>
+    <p type="text" id="kq"></p>
+
+   <script>
+        function play() {
+            let max = parseInt(prompt(" input a max : "));
+            let min =parseInt( prompt(" input a min : "));
+            let random = min+Math.round(Math.random()*(max-min));
+            alert(random);
+            let num;
+            let dem=0;
+            do {
+                 num = parseInt(prompt("Nhập dự đoán : "));
+                 dem++;
+                 if(num > random ){
+                     alert("Dự đoán lớn hơn !");
+                 }else if(num < random){
+                     alert("Dự đoán nhỏ hơn !");
+                 }else {
+                     alert("Chúc mừng bạn dự đoán đúng !");
+                     break;
+                 }
+                 if(dem===3){
+                     alert("bạn nhập qáu 3 lần !");
+                     break;
+                 }
+
+            }while (num > random || num <random)
+        }
+    </script>
+</body>
+</html>

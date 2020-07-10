@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình chữ nhật</title>
+</head>
+<body>
+    <script>
+        let chieuCao = prompt("nhập chiều cao : ");
+        let cd = prompt("nhập chiều dài : ");
+        for (let i = 1; i <= chieuCao; i++) {
+            for (let j = 1; j <= cd; j++) {
+                if (i == 1 || i == chieuCao || j == 1 || j == cd) {
+                    document.writeln("*");
+                } else {
+                    document.writeln("\xa0\xa0");
+                }
+                if (j == cd) {
+                    document.writeln("<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

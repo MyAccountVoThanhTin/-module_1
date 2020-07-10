@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let n1 = 0;
+        let n2 = 1;
+        let total = 1;
+        let n3;
+        let dem = 0;
+        let n = parseInt(prompt("Nhập số phần tử trong dãy fibonacy : "));
+        document.writeln(n1 + "<br>");
+        document.writeln(n2 + "<br>");
+        for (let i = 2; i < n; i++) {
+            n3 = n1 + n2;
+            dem++;
+            if (dem == 19) {
+                document.writeln("tổng 20 số fibonacy dầu tiên là :" + total);
+                break;
+            } else {
+                n1 = n2;
+                n2 = n3;
+                document.writeln(n3 + "<br>");
+                total = total + n3;
+            }
+        }
+    </script>
+</body>
+</html>
