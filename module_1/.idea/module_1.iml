@@ -5,5 +5,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="luyen_tap_cau_truc_lap_2" />
+    <orderEntry type="module" module-name="yeu_cau_3_task_1" />
+    <orderEntry type="module" module-name="tim_gia_tri_lon_nhat_trong_mang" />
+    <orderEntry type="module" module-name="co_caro_don_gian" />
+    <orderEntry type="module" module-name="su_dung_cac_ham_co_san" />
+    <orderEntry type="module" module-name="luyen_tap_mang_1" />
   </component>
 </module>

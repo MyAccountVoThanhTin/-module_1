@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhap so luong phan tu : ");
+    let array = new Array(num);
+    for (let i = 0; i < num; i++) {
+        array[i] = (prompt("phần tư thứ " + (i + 1) + "là : "));
+    }
+    ///// xóa phần tử có trong mảng///////////
+    //let v = prompt("Nhập kí tự cần xóa");
+    // for (let j=0;j<num;j++){
+    //     if(v==array[j]){
+    //         array.splice(j,1)
+    //     }else continue;
+    // }
+    //////////xóa 1 từ trong chuỗi của 1 mảng///////
+    ///////////////////
+    //cách 1 :
+    let v = prompt("nhập phần tử cần tìm : ");
+    document.writeln("Mang ban dau là : " + array + "<br>");
+    for (let j = 0; j < num; j++) {
+        for (let k = 0; k < array[j].length; k++) {
+            if (v == array[j][k]) {
+                array[j] = array[j].replace(v, "");
+            }
+        }
+    }
+    document.writeln("mang sau hki xoa là : " + array);
+    //cách 2 :
+    // for (let j = 0; j < num; j++) {
+    //     for (let k = 0; k < array[j].length; k++) {
+    //         if (v == array[j][k]) {
+    //             let arr = array[j].split("");/// chuyển phần tử chuỗi của mảng thành mảng con
+    //             arr.splice(k, 1);
+    //             array[j]=arr.join("");///chuyển chuỗi con arr thành chuỗi cha array[j]
+    //             alert(array[j])
+    //         }
+    //     }
+    // }alert(array);
+</script>
+</body>
+</html>

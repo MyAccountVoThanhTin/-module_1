@@ -6,16 +6,17 @@
 </head>
 <body>
     <script>
-        let chCao = prompt("nhập chiều cao : ");
-        let chDai = prompt("nhập chiều dài : ");
-        for (let i = 1; i <= chCao; i++) {
-            for (let j = 1; j <= chDai; j++) {
-                if (j < i || ) {
-                    document.writeln("\xa0\xa0");
-                } else {
-                    document.writeln("*")
-                }
+        let chCao = parseInt(prompt("nhập chiều cao : "));
+        //let chDai = parseInt(prompt("nhập chiều dài : "));
+        let j;
+        for(let i =1 ; i <=chCao ; i++){
+            for ( j = 1 ; j < i; j++){
+                document.writeln("\xa0\xa0");
             }
+            for (j = 1 ;j<=(chCao * 2 - (2 * i -1));j++){
+                document.writeln("*")
+            }
+            document.writeln("<br>");
         }
     </script>
 </body>

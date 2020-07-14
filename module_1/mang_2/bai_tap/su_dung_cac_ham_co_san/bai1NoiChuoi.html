@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let x = prompt("nhập số lượng  mảng");
+        let array =new Array(x);
+        for (let i=0; i<x ;i++){
+            array[i]= prompt("Phần tử thứ "+" "+(i+1)+" "+"là :" );
+        }
+        for (let item in array ){
+            document.writeln("Phần tử thứ  "+" "+(item+1)+"là :"+" "+array[item]+"<br>");
+        }
+        document.writeln(array.join(" "));
+    </script>
+</body>
+</html>

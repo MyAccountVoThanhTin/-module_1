@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let name = prompt("Nhập họ và tên ");
+        let birthday = prompt("Nhập ngày sinh :");
+        let cmnd;
+        let check = false;
+        do {
+            cmnd = prompt("Nhập số CMND : ");
+            if(!isNaN(cmnd)){
+                cmnd = Number.parseFloat(cmnd);
+            }
+            if(!Number.isInteger(cmnd)){
+                alert("CMND không hợp lệ !");
+                continue;
+            }
+            if(cmnd < 10000000 || cmnd > 99999999){
+                alert("CMND không hợp lệ !");
+                continue;
+            }
+            check = true;
+        }while (!check)
+        check=false;
+        let email;
+        let countAt=0;
+        let countDoc=0;
+        do {
+            email = prompt("Nhập địa cỉ email của bạn : ");
+            let at = email.indexOf("@");
+            for (let i = 0;i<email.length;i++){
+                if(email.charAt(i)==="@"){
+                    countAt++;
+                }for (let j=i+1;j<email.length;j++){
+                    if(email.charAt(j)==="."){
+                        countDoc++;
+                    }
+                }
+            }
+            if(countAt!=1 || countDoc<1){
+                alert("Email không đúng định dạng !");
+            }else {
+                check=true;
+            }
+        }while (!check)
+    </script>
+</body>
+</html>

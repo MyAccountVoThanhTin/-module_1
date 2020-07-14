@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let num = prompt("nhap so luong phan tu : ");
+        let array = new Array(num);
+        for (let i = 0; i < num; i++) {
+            array[i] = (prompt("phần tư thứ " + (i + 1) + "là : "));
+        }
+        let check = true;
+        let v = prompt("nhập phần tử cần tìm : ");
+        for (let j = 0; j < num; j++) {
+            if (v == array[j]) {
+                check = true;
+            } else {
+                check = false;
+            }
+        }
+        if (check) {
+            alert("V is in the array");
+        } else {
+            alert("V is not in the array");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let x = prompt("nhap số lương giá trị trong mảng ");
+        let array = Array(x);
+        for (let i = 0 ; i < x ; i++){
+            array[i]=prompt("phần tử thứ" +(i+1)+" là :" );
+        }
+        let a = 1;
+        for (let item of array){
+            document.writeln("Phần tử thứ"+a+ " là : "+item+"<br>");
+            a++;
+        }
+        let item2;
+        var index;
+        let max = array[0];
+        for ( item2 in array){
+            if(max < array[item2]){
+                max = array[item2];
+                index = item2;
+            }
+        }
+        document.writeln("Giá tị lớn nhất trong mảng là : "+max+ " ở vị trí thứ "+(parseInt(index)+1));
+    </script>
+</body>
+</html>

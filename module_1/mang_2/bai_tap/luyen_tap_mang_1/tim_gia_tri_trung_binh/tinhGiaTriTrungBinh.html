@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let num = prompt("nhap so luong phan tu : ");
+        let array = new Array(num);
+        for (let i = 0;i<num;i++){
+            array[i]=parseInt(prompt("phần tư thứ "+(i+1)+"là : "));
+        }
+        let tong = 0;
+        for (let j=0;j<num;j++){
+            tong = tong + array[j];
+        }
+        let trungbinh = tong/parseInt(num);
+        alert("Mảng là : "+array);
+        alert("trung bình các phần tử trong mảng là : "+trungbinh);
+    </script>
+</body>
+</html>

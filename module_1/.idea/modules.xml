@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/mang_!/thuc_hanh/co_caro_don_gian/.idea/co_caro_don_gian.iml" filepath="$PROJECT_DIR$/mang_!/thuc_hanh/co_caro_don_gian/.idea/co_caro_don_gian.iml" />
       <module fileurl="file://$PROJECT_DIR$/cau_truc_lap_2/bai_tap/luyen_tap_cau_truc_lap_2/.idea/luyen_tap_cau_truc_lap_2.iml" filepath="$PROJECT_DIR$/cau_truc_lap_2/bai_tap/luyen_tap_cau_truc_lap_2/.idea/luyen_tap_cau_truc_lap_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mang_2/bai_tap/luyen_tap_mang_1/.idea/luyen_tap_mang_1.iml" filepath="$PROJECT_DIR$/mang_2/bai_tap/luyen_tap_mang_1/.idea/luyen_tap_mang_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/module_1.iml" filepath="$PROJECT_DIR$/.idea/module_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mang_2/bai_tap/su_dung_cac_ham_co_san/.idea/su_dung_cac_ham_co_san.iml" filepath="$PROJECT_DIR$/mang_2/bai_tap/su_dung_cac_ham_co_san/.idea/su_dung_cac_ham_co_san.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mang_!/thuc_hanh/tim_gia_tri_lon_nhat_trong_mang/.idea/tim_gia_tri_lon_nhat_trong_mang.iml" filepath="$PROJECT_DIR$/mang_!/thuc_hanh/tim_gia_tri_lon_nhat_trong_mang/.idea/tim_gia_tri_lon_nhat_trong_mang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/case_study/yeu_cau_3_task_1/.idea/yeu_cau_3_task_1.iml" filepath="$PROJECT_DIR$/case_study/yeu_cau_3_task_1/.idea/yeu_cau_3_task_1.iml" />
     </modules>
   </component>
 </project>

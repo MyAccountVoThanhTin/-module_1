@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let num = prompt("nhap so luong phan tu : ");
+        let array = new Array(num);
+        let dem = 0;
+        for (let i = 0;i<num;i++){
+            array[i] = (prompt("phần tư thứ " + (i + 1) + "là : "));
+        }
+        for (let j=0;j<num;j++) {
+            while (isNaN(array[j])){
+                alert("Nhập lại kiểu kí tự số tại vị trí:" + (j + 1));
+                array[j] = prompt("giá trị nhập lại là : ");
+            }
+        }
+        alert(array);
+        let array2 = [];
+        for (let k = 0 ;k<num;k++){
+            if (array[k]< 0){
+                array2 +=array[k];
+                dem++;
+            }
+        }
+        alert(array2);
+    </script>
+</body>
+</html>

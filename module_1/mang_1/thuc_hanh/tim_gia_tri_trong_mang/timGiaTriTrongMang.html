@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let x = prompt("Nhập số phần tử của mảng:") ;
+        let array = new Array(x);
+        for( let i = 0; i<x;i++) {
+            array[i] = prompt("Nhập cho phần tử thứ " + (i + 1)+"là : ")
+        }
+        let gitri = prompt("Nhập giá trị kiểm tra : ");
+        // cách 1
+        for(let item in array){
+            document.writeln("Giá trị vừa nhập là : "+"<br>");
+            document.writeln(array[item]+"<br>");
+            if(gitri == array[item]){
+                document.writeln("giá trị vừa nhập :"+array[item]+"ở vị trí"+item);
+            }else continue;
+        }
+        // //cách 2
+        // for(let item of array){
+        //     document.writeln(item);
+        // }
+        // //cách 3
+        // for (let i = 0;i<x;i++){
+        //     document.writeln(array[i]);
+        // }
+
+    </script>
+</body>
+</html>
