@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check = true;
+
+    function isPrime(num) {
+        let dem = 0;
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                dem++;
+            }
+        }
+        if (dem === 2) {
+            return check;
+        }
+    }
+
+    let arr = [];
+    for (let j = 2; j <= 10000  ; j++) {
+        let result = isPrime(j);
+        if (result) {
+            arr.push(j);
+        }
+    }
+    alert(arr.join("-"));
+</script>
+</body>
+</html>

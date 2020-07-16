@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let num = prompt("nhap so luong mang : ");
+        let arr = new Array(num);
+        for (let i = 0;i<num;i++){
+            arr[i] = prompt("giá trị phần tử thứ "+" "+i+" "+"la" );
+        }
+        alert("Mảng là : "+arr.join(" "));
+        let result = check(arr);
+        alert(result);
+        function check(arr1) {
+            let a =prompt("nhap vao so can kiem tra :");
+            let dem=0;
+            for (let i =0;i<arr1.length;i++){
+                if(arr1[i] === a){
+                    dem++;
+                }
+            }
+            if(dem === 0){
+                return -1;
+            }else {
+                return dem;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(a, b) {
+        a = parseInt(a);
+        b = parseInt(b);
+        if (a > b) {
+            alert("Số thứ nhất lớn hơn số thứ 2 !");
+        } else {
+            alert("tổng là : " + (a + b));
+        }
+    }
+    let a1,b1;
+    do {
+         a1 = prompt("nhập đối số thứ nhất : ");
+         b1 = prompt("nhập đối số thứ hai : ");
+    } while (isNaN(a1) || isNaN(b1))
+    check(a1, b1);
+</script>
+</body>
+</html>

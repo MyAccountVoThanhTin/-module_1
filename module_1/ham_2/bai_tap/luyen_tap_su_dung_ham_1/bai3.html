@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Tham số thứ nhất là :<input id="num1" type="text"/>
+Tham số thứ hai là :<input id="num2" type="text"/>
+<input type="button" value="kết quả" onclick="result()"/>
+<p id="kq"></p>
+<script>
+    function result() {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+        if (isNaN(a)||isNaN(b)) {
+                alert("nhập lại kí tự số !");
+                document.getElementById("num1").innerHTML = "";
+                document.getElementById("num2").innerHTML = "";
+        } else {
+            a = parseInt(a);
+            b = parseInt(b);
+            if (a > b) {
+                document.getElementById("kq").innerHTML = "Số thứu nhất lớn hơn số thứ hai !";
+            } else document.getElementById("kq").innerHTML = a + b;
+        }
+    }
+</script>
+</body>
+</html>

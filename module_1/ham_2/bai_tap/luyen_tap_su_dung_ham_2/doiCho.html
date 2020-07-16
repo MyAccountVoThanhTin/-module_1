@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let num1 = prompt("Nhap vao so thu nhat : ");
+        let num2 = prompt("Nhap vao so thu hai : ");
+        result = random(num1,num2);
+        alert(result);
+        function random(a,b) {
+            let temp = num1;
+            num1 = num2;
+            num2 = temp;
+            return "sau khi đổi chỗ : "+num1+"va"+num2;
+        }
+    </script>
+</body>
+</html>

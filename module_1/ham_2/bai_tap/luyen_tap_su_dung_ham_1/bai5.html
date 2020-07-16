@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let check1 = true;
+    let vitri = 0;
+
+    function check(arr3) {
+        let str = prompt("nhap vao 1 chuoi : ");
+        for (let i = 0; i < arr3.length; i++) {
+            if (str === arr3[i]) {
+                vitri = i;
+                return check1;
+            }
+        }
+    }
+
+    let result = check(arr1);
+    if (result) {
+        alert(arr2[vitri]);
+    } else alert("Khong co trong mang !");
+</script>
+</body>
+</html>
