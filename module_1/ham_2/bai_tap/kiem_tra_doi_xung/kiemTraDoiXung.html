@@ -9,22 +9,17 @@
     let str = prompt("nhap 1 day de kiem tra : ");
     let result = check(str);
     alert(result);
-
-    function check(value) {
-        let kt = true;
-        for (let i = 1; i < value.length; i++) {
-            let j = value.length;
-            if (i === j) {
-                value.slice(j, 1);
-                kt = true
-            } else {
-                kt = false;
-            }
-        }
-        if (kt) {
+    function check(st) {
+        let first=0;
+        let last=st.length-1;
+        if(first>=last) {
             return true;
-        } else {
+        }
+        else if(st[first]!== st[last]){
             return false;
+        }
+        else {
+            return check(st.slice(1,st.length-1));
         }
     }
 </script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+    <script>
+       class HinhChuNhat{
+           constructor(cd,cr) {
+               this.cd = cd;
+               this.cr = cr;
+           }
+           dienTich(){
+               return this.cd*this.cr;
+           }
+           chuVi(){
+               return (this.cd + this.cr)*2;
+           }
+           veCanvas(){
+               let canvas = document.getElementById("myCanvas");
+               let ctx = canvas.getContext("2d");
+               ctx.fillStyle = "#FF0000";
+               ctx.fillRect(0,0,this.cd*10,this.cr*10);
+           }
+       }
+       let cd = parseFloat(prompt("nhap chieu dai :"));
+       let cr = parseFloat(prompt("nhap chieu rong :"));
+       let hinhChuNhat = new HinhChuNhat(cd,cr);
+       alert("Dien tich hinh chu nhat la  : "+hinhChuNhat.dienTich());
+       alert("Chu vi hinh chu nhat la  : "+hinhChuNhat.chuVi());
+        hinhChuNhat.veCanvas();
+    </script>
+</body>
+</html>

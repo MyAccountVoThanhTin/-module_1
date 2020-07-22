@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    class Oto {
+        constructor(img, top, left, size) {
+            this.img = img;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+
+        getImage() {
+            return '<img width="'+ this.size +'"' +
+                'height="'+ this.size +'"' +
+                'style="top: '+ this.top +'px;left: '+ this.left +'px;position: absolute"' +
+                'src="'+ this.img +'"/>'
+        }
+        moveRight() {
+            this.left += 20;
+        }
+
+        moveLeft() {
+            this.left -= 20;
+        }
+
+        moveUp() {
+            this.top -= 20;
+        }
+
+        moveDown() {
+            this.top += 20;
+        }
+    }
+
+    let move = new Oto('ngua.jpg', 20, 20, 100);
+
+    function start() {
+        if (move.left < window.innerWidth - move.size) {
+            move.moveRight();
+        } else if (move.left === window.innerWidth - move.size) {
+            move.moveDown();
+        }
+        document.getElementById("game").innerHTML = move.getImage();
+        setTimeout(start, 500);
+    }
+
+    start();
+</script>
+</body>
+</html>

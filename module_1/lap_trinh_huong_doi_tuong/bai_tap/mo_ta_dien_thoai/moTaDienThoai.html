@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class DienThoai {
+        constructor() {
+            this.pin = 100;
+            this.tinNhanSoanThao = [];
+            this.tinNhanHopThuDen = [];
+            this.tinNhanDaGui = [];
+            this.status = 'On';
+        }
+
+        trangThai() {
+            return this.status;
+        }
+
+        onOff() {
+            if (this.status === 'On') {
+                this.status = 'Off';
+            } else {
+                this.status = 'On'
+            }
+        }
+
+        sacPin() {
+            this.pin = 100;
+        }
+
+        soanTinNhan(text) {
+            this.tinNhanSoanThao = text;
+            this.pin--;
+        }
+
+        guiTinNhan(dienthoai) {
+            this.tinNhanDaGui = this.tinNhanSoanThao;
+            this.pin--;
+            this.tinNhanSoanThao = [];
+            dienthoai.tinNhanHopThuDen = this.tinNhanDaGui;
+            this.pin--;
+        }
+
+        // nhanTinNhan(dienthoai){
+        //     this.tinNhanHopThuDen = dienthoai.vungNhoTinDaGui;
+        //     this.pin--;
+        // }
+        xemTinNhan() {
+            this.pin--;
+            return this.tinNhanHopThuDen;
+        }
+
+        xemTinGui() {
+            this.pin--;
+            return this.tinNhanDaGui;
+        }
+    }
+
+    let nokia = new DienThoai();
+    let iphone = new DienThoai();
+
+    let str = 'abc';
+    nokia.soanTinNhan(str);
+    nokia.guiTinNhan(iphone);
+    //iphone.nhanTinNhan();
+    alert(iphone.xemTinNhan());
+    alert(nokia.xemTinGui());
+</script>
+</body>
+</html>

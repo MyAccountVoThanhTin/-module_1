@@ -5,14 +5,70 @@
     <title>Title</title>
 </head>
 <body>
-    <input type="text"id="input"/>
-    <input type="button" value="Add" onclick="add()"/>
-    <p><label>Total Product : </label><span id="toal"></span></p>
-    <script>
-        let arr = ["ip","samsung","oppo"];
-        function hienThi() {
-            let bang =
+<input type="text" id="input"/>
+<input type="button" value="Thêm sản phẩm" onclick="add()"/>
+<br>
+<br>
+<label>Tổng số sản phẩm :</label><span id="total"></span>
+<p id="hienThi"></p>
+<script>
+    let arr = ['samsung', 'iphone', 'oppo'];
+    hienThi();
+
+    function add() {
+        let tenSP = document.getElementById("input").value;
+        if (tenSP == "") {
+            alert("Bạn chưa nhập tên sản phẩm !");
+        } else {
+            arr.push(tenSP);
+            document.getElementById("input").value = " ";
         }
-    </script>
+        hienThi();
+
+    }
+
+    function xoa(id) {
+        let kiemTraXoa = confirm("Bạn có thực sự muốn xóa !");
+        if (kiemTraXoa) {
+            arr.splice(id, 1);
+            hienThi();
+        } else {
+            alert("Bạn chưa thực sự muốn xóa !");
+        }
+    }
+
+    function sua(id) {
+        let tenSPMoi = prompt("Nhập tên sản phẩm sửa !");
+        if (tenSPMoi == null) {
+            alert("Bạn chưa muốn sửa !");
+        } else if (tenSPMoi == "") {
+            alert("Nhập tên sản phẩm mới !")
+        } else {
+            arr[id] = tenSPMoi;
+        }
+        hienThi();
+    }
+
+    function hienThi() {
+        let bang = '<table border="1">' +
+            '<tr>\n' +
+            '<th>Số thứ tự</th>\n' +
+            '<th>Tên sản phẩm</th>\n' +
+            '<th>Chức năng sửa</th>\n' +
+            '<th>Chức năng xóa</th>\n' +
+            '</tr>'
+        for (let i = 0; i < arr.length; i++) {
+            bang += '<tr>\n' +
+                '<td>' + (i + 1) + '</td>\n' +
+                '<td>' + arr[i] + '</td>\n' +
+                '<td><input type="button" value="Sửa" onclick="sua( ' + i + ' )"/></td>\n' +
+                '<td><input type="button" value="Xóa" onclick="xoa(' + i + ')"/></td>\n' +
+                '</tr>'
+        }
+        bang += '</table>'
+        document.getElementById("hienThi").innerHTML = bang;
+        document.getElementById("total").innerHTML = arr.length;
+    }
+</script>
 </body>
 </html>

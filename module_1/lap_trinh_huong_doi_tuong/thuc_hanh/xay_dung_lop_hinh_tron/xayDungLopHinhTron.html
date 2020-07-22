@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const PI=3.14
+        class Circle {
+            constructor(radius) {
+                this.radius = radius;
+            }
+            dienTich(){
+                return PI*this.radius*this.radius;
+            }
+        }
+        let banKinh = prompt("nhap ban kinh : ")
+        let result = new Circle(banKinh);
+        alert("Dien tich la :"+result.dienTich());
+    </script>
+</body>
+</html>

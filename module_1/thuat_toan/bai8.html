@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt(" Nhap a :"));
+    let b = parseInt(prompt(" Nhap b :"));
+    //alert(boiChung(a, b));
+    alert(ucln(a,b));
+    //// tim boi chung
+    // function boiChung(a, b) {
+    //     let boiChung = 0;
+    //     if (a === b) {
+    //         boiChung = a;
+    //     } else if (Math.abs(a) === Math.abs(b * 2) || Math.abs(b) === Math.abs(a * 2)) {
+    //         if (a > b) {
+    //             boiChung = a;
+    //         } else {
+    //             boiChung = b;
+    //         }
+    //     } else if (a % 2 === 0 && b % 2 === 0) {
+    //         boiChung = Math.abs((a * b) / 2)
+    //     } else {
+    //         boiChung = a * b;
+    //     }
+    //     let ucln = (a * b )/boiChung;
+    //     return boiChung + " " +ucln;
+    // }
+    // uoc chung lon nhat
+    function ucln(a,b) {
+        let tmp;
+        while(b !== 0) {
+            tmp = a % b;
+            a = b;
+            b = tmp;
+        }
+        return a;
+    }
+</script>
+</body>
+</html>

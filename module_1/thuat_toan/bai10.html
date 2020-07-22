@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap chuoi : ");
+    inChuoi(str);
+    document.writeln(demTu(str));
+    document.writeln(tanSoXuatHien(str));
+
+    function inChuoi(a) {
+        a = a.split(" ");
+        for (let i = 0 ; i<=a.length -1;i++){
+            document.writeln(a[i]+"<br>");
+        }
+    }
+    function demTu(a) {
+        let dem  = 0;
+        a = a.split(" ");
+        for (let i = 0 ; i<= a.length-1;i++){
+            if(isNaN(a[i])){
+                dem++;
+            }
+        }
+        return dem;
+    }
+    function tanSoXuatHien(a) {
+        a = a.split(" ");
+        let b = [];
+        let dem = 0;
+        for (let i = 0; i < a.length; i++) {
+            dem = 1;
+            for (let j =i+1;j<a.length; j++) {
+                if (a[i] === a[j]) {
+                    dem++;
+                    a.splice(j, 1);
+                    j--;
+                }
+            }
+            b.push(a[i] + ": "+ dem);
+            //alert("mang   "+ a);
+        }
+        alert(b);
+    }
+</script>
+</body>
+</html>

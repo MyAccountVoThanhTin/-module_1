@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập độ c : <input type="text" id="input"/></label><input type="button" onclick="chage1()" value="chage"/>
+<label>Độ F</label><span><canvas id="myCanvas1" width="200" height="10" style="border:1px solid #d3d3d3;"/></span>
+<label>Độ Kenvin</label><span><canvas id="myCanvas2" width="1000" height="10" style="border:1px solid #d3d3d3;"/></span>
+<script>
+    class TinhDo {
+        constructor(doC) {
+        }
+        setdoC(doC){
+            this.doC = doC;
+        }
+        setdoF(doF){
+            this.doF = doF;
+        }
+        getdoF(){
+            return this.doC * 1.8000 + 32;
+        }
+        setdoK(doK){
+            this.doK = doK;
+        }
+        getdoK(){
+            return this.doC + 10;
+        }
+        show() {
+            let canvas1 = document.getElementById("myCanvas1");
+            let canvas2 = document.getElementById("myCanvas2");
+            let ctx1 = canvas1.getContext("2d");
+            ctx1.fillStyle = "#FF0000";
+            ctx1.fillRect(0, 0, this.getdoF(), 10);
+            let ctx2 = canvas2.getContext("2d");
+            ctx2.fillStyle = "#FF0000";
+            ctx2.fillRect(0, 0, this.getdoK(), 10)
+        }
+    }
+    let tinhDOC = new TinhDo();
+    tinhDOC.show();
+    function chage1(){
+        let doC = parseInt(document.getElementById("input").value);
+        tinhDOC.setdoC(doC);
+        tinhDOC.show();
+    }
+
+</script>
+</body>
+</html>

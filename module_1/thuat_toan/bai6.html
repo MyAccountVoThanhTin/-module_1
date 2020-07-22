@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = 1;
+    let n = parseInt(prompt("nhap n : "));
+    let check = (n%2 == 0) ? true : false;
+    for (let i = 1; i <= n;i++){
+        if (check){
+            if(i%2 === 0){
+                s *= i;
+            }
+        }else {
+            if(i % 2 !== 0){
+                s *= i;
+            }
+        }
+    }
+    alert(s);
+</script>
+</body>
+</html>

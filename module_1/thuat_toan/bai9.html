@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap 1 chuoi : ");
+
+    daoNguoc(str);
+    inHoa(str);
+    inThuong(str);
+    alert(doiChuoi(str));
+    alert(doichuoi1(str));
+    function daoNguoc(a) {
+        let res = "";
+        for (let i = a.length-1;i>=0;i--){
+            res += a.charAt(i);
+        }
+        alert(res);
+    }
+    function inHoa(a) {
+        alert(a.toUpperCase());
+    }
+    function inThuong(a) {
+        alert(a.toLowerCase());
+    }
+
+    function doiChuoi(a) {
+        let upper1 = 'ABCDEFGHJKLMNOPQRSTUVWXYZ';
+        let lower1 = 'abcdefghijklmnopqrstuvwyz';
+        let res = '';
+        for (let i = 0;i<=a.length-1;i++){
+            if(upper1.indexOf(a.charAt(i)) !=-1){
+               res += a.charAt(i).toLowerCase();
+            }else if(lower1.indexOf(a.charAt(i)) !=-1){
+                res += a.charAt(i).toUpperCase()
+            } else {
+                res += a.charAt(i);
+            }
+        }
+       return res;
+    }
+    function doichuoi1(a) {
+        let charCode = "";
+        let res = "";
+        for (let i = 0;i<=a.length-1;i++){
+            charCode = a.charAt(i).charCodeAt(0);
+            if(charCode <= 90 && charCode >= 65){
+                res += a.charAt(i).toLowerCase()
+            }else if(charCode >= 97 && charCode <= 122){
+                res += a.charAt(i).toUpperCase();
+            }else {
+                res += a.charAt(i);
+            }
+
+        }
+        return res ;
+    }
+</script>
+</body>
+</html>

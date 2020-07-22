@@ -5,32 +5,44 @@
     <title>Yêu cầu 3 task 1</title>
 </head>
 <body>
-    <script>
+<script>
+    function addNewCustomer() {
         let check = false;
-        //let nhap=prompt("Nhập lại:");
-        //cach 1 dinh dang name
-        // let dem=0;
-        // let lowNhap=nhap.toLowerCase();
-        // let name="";
-        // for(;dem<nhap.length;dem++){
-        //     if (lowNhap.charAt(dem)==" " && lowNhap.charAt(dem+1)==" "){
+        let nhap = prompt("Nhập họ và tên:");
+        // cach 1 dinh dang name
+        // let dem = 0;
+        // let lowNhap = nhap.toLowerCase();
+        // let name = "";
+        // for (; dem < nhap.length; dem++) {
+        //     if (lowNhap.charAt(dem) == " " && lowNhap.charAt(dem + 1) == " ") {
         //         continue;
         //     }
-        //     if(dem==0 || lowNhap.charAt(dem-1)==" "){
-        //         name=name+lowNhap.charAt(dem).toUpperCase();
+        //     if (dem == 0 || lowNhap.charAt(dem - 1) == " ") {
+        //         name = name + lowNhap.charAt(dem).toUpperCase();
         //         continue;
         //     }
-        //     name=name+lowNhap.charAt(dem);
-        // }alert(name);
-        //cach 2
-        let name = prompt("nhập tên");
-        for (let i = 0; i < name.length; i++) {
-            if(i= " "){
-                if ((i+1)==" "){
-                    name +=name.splice(i,1);
-                }
+        //     name = name + lowNhap.charAt(dem);
+        // }
+        // alert(name);
+        //cách 2 :
+        nhap.trim().toLowerCase();// Hàm trim dung dể cắt các kí tự tống ở hai đầu 2 bên !/////
+        let name = "";
+        for (let i = 0; i < nhap.length; i++) {
+            if (nhap.charAt(i) === " " && nhap.charAt(i + 1) === " ") {
+                continue;
             }
+            if (i == 0 || nhap.charAt(i - 1) === " ") {
+                name += nhap.charAt(i).toUpperCase();
+                continue;
+            }
+            name += nhap.charAt(i);
         }
+        alert(name);
+        //
+        //
+        //
+        //
+        //
         //Kiểm tra tính hợp lệ của cmnd
         let cmnd;
         do {
@@ -49,14 +61,29 @@
             check = true;
         } while (!check);
         check = false;
+        //định dạng ngày sinh
+        let birthday;
         do {
-            let birthday = prompt("input birthday : ");
-            if (!isNaN(birthday)) {
-                alert("Ngày sinh không đúng định dạng : ");
-                continue;
+            birthday = prompt("input birthday : ");
+            if (birthday.charAt(2) === "/" && birthday.charAt(5) === "/") {
+                let day = birthday.substring(0, 2);
+                let month = birthday.substring(3, 5);
+                let year = birthday.substring(6, 9);
+                if (day < 32 && month < 13) {
+                    check = true;
+                }
+                if (!check) {
+                    alert("Ngày sinh không đúng định dạng !");
+                }
             }
         } while (!check)
         check = false;
+        //
+        //
+        //
+        //
+        //
+        //
         // Kiểm tra tính hợp lệ của email
         let email;
         do {
@@ -101,6 +128,10 @@
         //     }
         // }
         // Chọn địa chỉ
+        //
+        //
+        //
+        //
         let address;
         let chooseAddress = prompt("Nhấn 1 chọn Đà Nẵng : "
             + "\n Nhấn 2 để chọn Huế"
@@ -127,6 +158,11 @@
                 chAdd = 0;
         }
         // chọn loại dịch vụ
+        //
+        //
+        //
+        //
+        //
         let typeService, chSe;
         let chService = prompt("Nhấn 1: Villa"
             + "\n Nhấn 2: House"
@@ -149,8 +185,17 @@
                 typeService = alert("Loại khác");
                 chSe = 0;
         }
+        //
+        //
+        //
+        //
         let typeRoom = prompt("input typeRoom : ");
         // Loại khách hàng
+        //
+        //
+        //
+        //
+        //
         let typeCustomer, chCus;
         let chCustomer = prompt("Nhấn 1: Customer là Diamond "
             + "\n Nhấn 2: Customer là Platium"
@@ -182,11 +227,59 @@
             default :
                 typeCustomer = alert("Loại khách hàng khác")
         }
-        let discount = parseInt(prompt("input discount : "));
-        let included = prompt("input included : ");
+        //
+        //
+        //
+        // định dạng giảm giá
+        let discount;
+        do {
+            discount = parseInt(prompt("input discount : "));
+            if (!isNaN(discount)) {
+                discount = Number.parseFloat(discount);
+                check = true;
+            }
+            if (!check) {
+                alert("Giảm giá không phải là một số nguyên !");
+            }
+        } while (!check)
+        check = false;
+        //
+        //
+        //
+        //
+        //
+
+        let included;
+        do {
+            included = prompt("input included : ");
+            if (!isNaN(included)) {
+                included = Number.parseFloat(included);
+                check = true;
+            }
+            if (!check) {
+                alert("Số người đi kèm không phải là một số nguyên !");
+            }
+        } while (!check)
         //số ngày thuê
+        //
+        //
+        //
+        //
         let chDay;
-        let renDays = parseInt(prompt("input renDays : "));
+        let renDays;
+        do {
+            renDays = parseInt(prompt("input renDays : "));
+            if (!isNaN(renDays)) {
+                renDays = Number.parseFloat(renDays);
+                if (Number.isInteger(renDays)) {
+                    check = true;
+                }
+                if (!check) {
+                    alert("Ngày thuê không phải là số nguyên !");
+                }
+            }
+        } while (!check)
+        check = false;
         //tính giảm giá theo ngày
         if (renDays >= 7) {
             chDay = 30;
@@ -197,6 +290,10 @@
         } else {
             chDay = 0;
         }
+        //
+        //
+        //
+        //
         //giảm giá theo năm sinh và tuổi
         let currentYear = new Date().getFullYear();
         let year = new Date(birthday).getFullYear();
@@ -211,82 +308,113 @@
         discount = discount + chDay + chAdd + chAge + chCus;
         //tỏng tiền phải trả
         let total = chSe * renDays * (1 - (discount / 100));
+    }
 
-        function show() {
-            document.writeln("Tên : " + name + "<br/>");
-            document.writeln("cmnd : " + cmnd + "<br/>");
-            document.writeln("Ngày sinh : " + birthday + "<br/>");
-            document.writeln("email : " + email + "<br/>");
-            document.writeln("Địa chỉ " + address + "<br/>");
-            document.writeln("Loại dịch vụ  : " + typeService + "<br/>");
-            document.writeln("Loai phòng : " + typeRoom + "<br/>");
-            document.writeln("Loại khách hàng : " + typeCustomer + "<br/>");
-            document.writeln("giảm giá : " + discount + "<br/>");
-            document.writeln("Số người : " + included + "<br/>");
-            document.writeln("Số ngày thuê : " + renDays + "<br/>");
-            document.writeln("Tổng tiền trả : " + total);
+    function display() {
+        let choose = "";
+        for (let i = 0; i < arrNameCustomer.length; i++) {
+            for (let j = 0; j < arrNameCustomer[i].length; j++) {
+                choose += i + 1 + "." + arrNameCustomer[i][0];
+            }
+            alert(choose);
         }
+        prompt("Chọn tên muốn hiển thị !");
+        let chooseDisplay = parseInt(prompt(choose));
+        alert("Tên : " + chooseDisplay[0] +
+            "\n cmnd : " + chooseDisplay[1] +
+            "\n Ngày sinh : " + chooseDisplay[2] +
+            "\n email : " + chooseDisplay[3] +
+            "\n Địa chỉ " + chooseDisplay[4] +
+            "\n Loại dịch vụ  : " + chooseDisplay[5] +
+            "\n Loai phòng : " + chooseDisplay[6] +
+            "\n Loại khách hàng : " + chooseDisplay[7] +
+            "\n giảm giá : " + chooseDisplay[8] +
+            "\n Số người : " + chooseDisplay[9] +
+            "\n Số ngày thuê : " + chooseDisplay[10] +
+            "Tổng tiền trả :" + total);
+    }
 
-        function edit() {
-            let choose = prompt("Nhấn 1 để sửa tên"
-                + "\n Nhấn 2 để sửa cmnd"
-                + "\n Nhấn 3 để sửa ngày sinh"
-                + "\n Nhấn 4 để sửa email"
-                + "\n Nhấn 5 để sửa address"
-                + "\n Nhấn 6 để sửa typeService"
-                + "\n Nhấn 7 để sửa typeRoom"
-                + "\n Nhấn 8 để sửa typeCustomer"
-                + "\n Nhấn 9 để sửa discount"
-                + "\n Nhấn 10 để sửa included"
-                + "\n Nhấn 11 để sửa renDays"
-            );
+    function edit() {
+        let choose = prompt("Nhấn 1 để sửa tên"
+            + "\n Nhấn 2 để sửa cmnd"
+            + "\n Nhấn 3 để sửa ngày sinh"
+            + "\n Nhấn 4 để sửa email"
+            + "\n Nhấn 5 để sửa address"
+            + "\n Nhấn 6 để sửa typeService"
+            + "\n Nhấn 7 để sửa typeRoom"
+            + "\n Nhấn 8 để sửa typeCustomer"
+            + "\n Nhấn 9 để sửa discount"
+            + "\n Nhấn 10 để sửa included"
+            + "\n Nhấn 11 để sửa renDays"
+        );
+        switch (choose) {
+            case '1':
+                name = prompt("nhập lại tên : ");
+                break;
+            case '2':
+                cmnd = prompt("nhập lại cmnd : ");
+                break;
+            case '3':
+                birthday = prompt("nhập lại ngày sinh : ");
+                break;
+            case '4':
+                email = prompt("nhập lại email : ");
+                break;
+            case '5':
+                address = prompt("nhập lại address : ");
+                break;
+            case '6':
+                typeService = prompt("nhập lại typeService : ");
+                break;
+            case '7':
+                typeRoom = prompt("nhập lại typeRoom : ");
+                break;
+            case '8':
+                typeCustomer = prompt("nhập lại typeCustomer : ");
+                break;
+            case '9':
+                discount = prompt("nhập lại discount : ");
+                break;
+            case '10':
+                included = prompt("nhập lại included : ");
+                break;
+            case '11':
+                renDays = prompt("nhập lại renDays : ");
+                break;
+        }
+    }
+
+    let arrNameCustomer = [];
+    displayMainMenu();
+    let check = true;
+
+    function displayMainMenu() {
+        while (true) {
+            let choose = prompt("Nhấn 1 để thêm phần tử " +
+                "\n Nhấn 2 để hiển thị " +
+                "\n Nhấn 3 để sửa thông tin " +
+                "\n Nhấn 4 để xóa thông tin " +
+                "\n Nhấn 5 để thoát !");
             switch (choose) {
-                case '1':
-                    name = prompt("nhập lại tên : ");
+                case "1":
+                    let arr = addNewCustomer();
+                    arrNameCustomer.push(arr);
                     break;
-                case '2':
-                    cmnd = prompt("nhập lại cmnd : ");
+                case "2":
+                    display();
                     break;
                 case '3':
-                    birthday = prompt("nhập lại ngày sinh : ");
                     break;
                 case '4':
-                    email = prompt("nhập lại email : ");
                     break;
                 case '5':
-                    address = prompt("nhập lại address : ");
-                    break;
-                case '6':
-                    typeService = prompt("nhập lại typeService : ");
-                    break;
-                case '7':
-                    typeRoom = prompt("nhập lại typeRoom : ");
-                    break;
-                case '8':
-                    typeCustomer = prompt("nhập lại typeCustomer : ");
-                    break;
-                case '9':
-                    discount = prompt("nhập lại discount : ");
-                    break;
-                case '10':
-                    included = prompt("nhập lại included : ");
-                    break;
-                case '11':
-                    renDays = prompt("nhập lại renDays : ");
+                    confirm("Bạn có thật sự muốn thoát !");
                     break;
             }
         }
+    }
 
-        let choose = prompt("Nhấn 1 để show . Nhấn 2 để thay đổi thông tin");
-        switch (choose) {
-            case "1":
-                show();
-                break;
-            case "2":
-                edit();
-                show();
-                break;
-        }
-    </script>
+    displayMainMenu()
+</script>
 </body>
 </html>

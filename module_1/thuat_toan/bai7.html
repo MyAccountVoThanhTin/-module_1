@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap 1 chuoi cac so : ");
+    let s = 1;
+    let sum = 0;
+    for (let i = 0 ;i<=str.length-1;i++){
+        s *= str.charAt(i);
+        sum += parseInt(str.charAt(i));
+    }
+    alert(s+" "+ sum);
+</script>
+</body>
+</html>

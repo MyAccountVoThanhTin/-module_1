@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhap n : "));
+    let sum = 0 ;
+    let giaiThua = 1;
+    for (let i = 1; i<=(2*n-1);i=i+2){
+        for (let j = 1;j<=i;j++){
+            giaiThua = giaiThua*j;
+        }
+        sum = sum + 1/giaiThua;
+    }
+    alert(sum);
+</script>
+</body>
+</html>

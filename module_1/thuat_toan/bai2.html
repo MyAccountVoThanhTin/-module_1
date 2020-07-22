@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let month, year;
+    do {
+        month = prompt("Nhap thang  : ");
+        year = prompt("Nhap nam  : ");
+        switch (month) {
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '12':
+                alert("Thang co 31 ngay !");
+                break;
+            case '4':
+            case '6':
+            case '9':
+            case '11':
+                alert("Thang co 30 ngay !");
+                break;
+            case "2":
+                if (year % 4 === 0) {
+                    if (year % 100 === 0) {
+                        alert("Nam khong nhuan : Co 29 ngay !");
+                    } else {
+                        alert("Nam nhuan : Co 28 ngay !");
+                    }
+                } else if (year % 400 === 0) {
+                    alert("Nam nhuan : Co 28 ngay !");
+                } else {
+                    alert("Nam khong nhuan : Co 29 ngay !");
+                }
+                break;
+        }
+    } while (isNaN(month) || isNaN(year) || month > 13 || year <= 0)
+</script>
+</body>
+</html>

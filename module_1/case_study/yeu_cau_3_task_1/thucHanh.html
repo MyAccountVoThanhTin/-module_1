@@ -6,10 +6,27 @@
 </head>
 <body>
     <script>
-        let name = prompt("Nhập họ và tên ");
-        let birthday = prompt("Nhập ngày sinh :");
-        let cmnd;
         let check = false;
+        let name = prompt("Nhập họ và tên ");
+        // định dạng ngày sinh
+        let birthday;
+        do {
+            birthday = prompt("Nhập ngày sinh :");
+            if(birthday.charAt(2)==="/" && birthday.charAt(5)=== "/"){
+                let day = birthday.substring(0,2);
+                let month = birthday.substring(3,5);
+                let year = birthday.substring(6,9);
+                if(day<32 && month<13){
+                    check = true;
+                }
+            }
+            if(!check){
+                alert("Ngày sinh không đúng định dạng !");
+            }
+        }while (!check)
+        check = false;
+        // định dạng CMND
+        let cmnd;
         do {
             cmnd = prompt("Nhập số CMND : ");
             if(!isNaN(cmnd)){
@@ -26,6 +43,7 @@
             check = true;
         }while (!check)
         check=false;
+        //Định dạng email
         let email;
         let countAt=0;
         let countDoc=0;
