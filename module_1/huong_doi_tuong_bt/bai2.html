@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidate</title>
+</head>
+<body>
+    <script>
+        class Candidate {
+            constructor() {
+                this.ma = "";
+                this.ten = "";
+                this.ngaySinh = "";
+                this.diemToan = 0;
+                this.diemVan = 0;
+                this.diemAnh = 0;
+                this.res = [];
+                this.check = true;
+            }
+
+            // getMa(){
+            //     return this.ma;
+            // }
+            // getTen(){
+            //     return this.ten;
+            // }
+            // getNgaySinh(){
+            //     return this.ngaySinh;
+            // }
+            // getDiemToan(){
+            //     return this.diemToan;
+            // }
+            // getDiemVan(){
+            //     return this.diemVan;
+            // }
+            // getDiemAnh(){
+            //     return this.diemAnh;
+            // }
+            setthiSinh(masv, tensv, ngaySinhsv, diemToansv, diemVansv, diemAnhsv) {
+                this.ma = masv;
+                this.ten = tensv;
+                this.ngaySinh = ngaySinhsv;
+                this.diemToan = diemAnhsv;
+                this.diemVan = diemVansv;
+                this.diemAnh = diemAnhsv;
+            }
+
+            tinhTongDiem() {
+                return (this.diemToan + this.diemVan + this.diemAnh);
+            }
+
+            kiemTra() {
+                if (this.tinhTongDiem() > 15) {
+                    return check = true;
+                } else {
+                    return check = false;
+                }
+            }
+        }
+        let sv1 = new Candidate();
+        let sv2 = new Candidate();
+        let sv3 = new Candidate();
+       // let in1 = new  In();
+
+        sv1.setthiSinh('01','tin','18',10,10,10);
+        sv2.setthiSinh("02","B",'19',1,1,1);
+        sv3.setthiSinh('03','C','20',5,5,5);
+        let a = [];
+
+
+    </script>
+</body>
+</html>

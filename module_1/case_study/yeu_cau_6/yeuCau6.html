@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Thêm Khách Hàng" onclick="addNewCustomer()"/>
+<style>
+    td, th {
+        text-align: center;
+    }
+</style>
+<table>
+    <p id="hienThi"></p>
+    <p id="show"></p>
+    <br>
+    <br>
+    <input type="button" value="Thêm Nhân Viên" onclick="addEmployee()"/>
+    <p id="nhanVien"></p>
+</table>
+<script>
+    class Customer {
+        constructor(ten, cmnd, ngaySinh, email, diaChi, loaiCustomer,
+                    giamGia, soLuong, soNgayThue, loaiDichVu, loaiPhongThue, total) {
+            this.tenKH = ten;
+            this.cmndKH = cmnd;
+            this.ngaySinhKH = ngaySinh;
+            this.emailKH = email;
+            this.diaChiKH = diaChi;
+            this.loaiCustomerKH = loaiCustomer;
+            this.giamGia = giamGia;
+            this.soLuongKH = soLuong;
+            this.soNgayThue = soNgayThue;
+            this.loaiDichVu = loaiDichVu;
+            this.loaiphongThue = loaiPhongThue;
+            this.total = total;
+        }
+
+        setTenKH(ten) {
+            this.tenKH = ten;
+        }
+
+        getTenKh() {
+            return this.tenKH;
+        }
+
+        setCmndKH(cmnd) {
+            this.cmndKH = cmnd;
+        }
+
+        getCmndKH() {
+            return this.cmndKH;
+        }
+
+        setNgaySinhKH(ngaySinh) {
+            this.ngaySinhKH = ngaySinh
+        }
+
+        getNgaySinhKH() {
+            return this.ngaySinhKH;
+        }
+
+        setEmailKh(email) {
+            this.emailKH = email;
+        }
+
+        getEmailKH() {
+            return this.emailKH;
+        }
+
+        setDiaChiKH(diaChi) {
+            this.diaChiKH = diaChi;
+        }
+
+        getDiaChi() {
+            return this.diaChiKH;
+        }
+
+        setLoaiCustomerKh(loaiCustomer) {
+            this.loaiCustomerKH = loaiCustomer;
+        }
+
+        getLoaiCustomer() {
+            return this.loaiCustomerKH;
+        }
+
+        setGiamGia(giamGia) {
+            this.giamGia = giamGia;
+        }
+
+        getGiamGia() {
+            return this.giamGia;
+        }
+
+        setSoLuong(soLuong) {
+            this.soLuongKH = soluong;
+        }
+
+        getSoLuong() {
+            return this.soLuongKH;
+        }
+
+        setSoNgayThue(soNgayThue) {
+            this.soNgayThue = soNgayThue;
+        }
+
+        getSoNgayThue() {
+            return this.soNgayThue;
+        }
+
+        setLoaiDichVu(loaiDichVu) {
+            this.loaiDichVu = loaiDichVu;
+        }
+
+        getLoaiDichVu() {
+            return this.loaiDichVu;
+        }
+
+        setLoaiPhongThue(loaiPhongThue) {
+            this.loaiphongThue = loaiPhongThue;
+        }
+
+        getLoaiPhongThue() {
+            return this.loaiphongThue;
+        }
+
+        getTongTien() {
+            let res = 0;
+            if (this.loaiDichVu === "Villa") {
+                res = 500;
+            } else if (this.loaiDichVu === "House") {
+                res = 300
+            } else {
+                res = 100;
+            }
+            return this.total = res * this.soNgayThue * (1 - (this.giamGia / 200));
+        }
+    }
+
+
+    class Employee extends Customer {
+        constructor(ten, cmnd, ngaySinh, email, diaChi, chucVu) {
+            super(ten, cmnd, ngaySinh, email, diaChi);
+            this.tienLuong = 0;
+            this.chucVu = chucVu;
+            this.luongCoBan = 5000;
+        }
+
+        getChuVu() {
+            return this.chucVu;
+        }
+
+        setChucVu(chucVu) {
+            this.chucVu = chucVu;
+        }
+        getTienLuong() {
+            let troCap = 0;
+            if (this.chucVu === "Manager") {
+                troCap = 500;
+            } else if (this.chucVu === "Sale") {
+                troCap = 300
+            } else if (this.chucVu === "Marketing") {
+                troCap = 200;
+            } else {
+                troCap = 0;
+            }
+            return this.tienLuong = this.luongCoBan + troCap;
+        }
+        getInfo(){
+            return "Tên: "+ this.tenKH +"\n CMND: "+this.cmndKH + "\n Email: "+this.emailKH+
+                    "\n Địa chỉ:"+this.diaChiKH+"\n Chức vụ: "+this.chucVu+"\n Tiền luong: "+this.getTienLuong();
+        }
+    }
+
+
+    let danhSachKH = [];
+    let danhSachNV = [];
+    let cus1 = new Customer('tin', '123456', '18', 'vtt@gg', 'da nang', 'vip', 5, 10, 10, 'homestay', 'vip');
+    let cus2 = new Customer('2', '1231', '18', 'vtt22@', 'qng', 'thuong', 10, 20, 30, 'vv', 'thuong');
+    danhSachKH.push(cus1);
+    danhSachKH.push(cus2);
+    hienThi(danhSachKH)
+
+    function hienThi(danhSach) {
+        danhSach = sapXep(danhSach);
+        let bang = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th> STT</th>\n' +
+            '        <th> Tên</th>\n' +
+            '        <th> CMND</th>\n' +
+            '        <th> Ngày Sinh</th>\n' +
+            '        <th> Email</th>\n' +
+            '        <th> Địa Chỉ</th>\n' +
+            '        <th> Loại Khách Hàng</th>\n' +
+            '        <th> Giảm Giá</th>\n' +
+            '        <th> Số Luọng</th>\n' +
+            '        <th> Số Ngày Thuê</th>\n' +
+            '        <th> Loại Dịch Vụ</th>\n' +
+            '        <th> loại Phòng Thuê</th>\n' +
+            '        <th> Tổng Tiền</th>\n' +
+            // '        <th></th>\n' +
+            // '        <th></th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+
+            bang += '<tr>\n' +
+                '        <td> ' + (i + 1) + '</td>\n' +
+                '        <td> ' + danhSach[i].getTenKh() + '</td>\n' +
+                '        <td> ' + danhSach[i].getCmndKH() + '</td>\n' +
+                '        <td> ' + danhSach[i].getNgaySinhKH() + '</td>\n' +
+                '        <td> ' + danhSach[i].getEmailKH() + '</td>\n' +
+                '        <td> ' + danhSach[i].getDiaChi() + '</td>\n' +
+                '        <td> ' + danhSach[i].getLoaiCustomer() + '</td>\n' +
+                '        <td> ' + danhSach[i].getGiamGia() + '</td>\n' +
+                '        <td> ' + danhSach[i].getSoLuong() + '</td>\n' +
+                '        <td> ' + danhSach[i].getSoNgayThue() + '</td>\n' +
+                '        <td> ' + danhSach[i].getLoaiDichVu() + '</td>\n' +
+                '        <td> ' + danhSach[i].getLoaiPhongThue() + '</td>\n' +
+                '        <td> ' + danhSach[i].getTongTien() + '</td>\n' +
+                '        <td> <input type="button" value="sửa" onclick="suaThongTinNV(' + i + ')"></td>\n' +
+                '        <td> <input type="button" value="xóa" onclick="xoaNV(' + i + ');"></td>\n' +
+                '        <td> <input type="button" value="Hiển Thị" onmouseover="hThi(' + i + ');"></td>\n' +
+                '    </tr>';
+        }
+        bang += '</table>';
+        document.getElementById("hienThi").innerHTML = bang;
+    }
+
+    function addNewCustomer() {
+
+        let check = false;
+        let nhap = prompt("Nhập họ và tên:");
+        nhap.trim().toLowerCase();// Hàm trim dung dể cắt các kí tự tống ở hai đầu 2 bên !/////
+        let ten = "";
+        for (let i = 0; i < nhap.length; i++) {
+            if (nhap.charAt(i) === " " && nhap.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (i == 0 || nhap.charAt(i - 1) === " ") {
+                ten += nhap.charAt(i).toUpperCase();
+                continue;
+            }
+            ten += nhap.charAt(i);
+        }
+
+        //
+        //Kiểm tra tính hợp lệ của cmnd
+        let cmnd;
+        do {
+            cmnd = prompt("Nhập cmnd : đủ 8 số ");
+            if (!isNaN(cmnd)) {
+                cmnd = Number.parseFloat(cmnd);
+            }
+            if (!Number.isInteger(cmnd)) {
+                alert("CMND không đúng định dạng");
+                continue;
+            }
+            if (cmnd < 10000000 || cmnd > 99999999) {
+                alert("CMND không đúng định dạng");
+                continue;
+            }
+            check = true;
+        } while (!check);
+        check = false;
+        //định dạng ngày sinh
+        let birthday;
+        do {
+            birthday = prompt("Nhập ngày sinh theo định dạng : dd/mm/yyyy " +
+                "\n vd: 18/01/1997");
+            if (birthday.charAt(2) === "/" && birthday.charAt(5) === "/") {
+                let day = birthday.substring(0, 2);
+                let month = birthday.substring(3, 5);
+                let year = birthday.substring(6, 9);
+                if (day < 32 && month < 13) {
+                    check = true;
+                }
+                if (!check) {
+                    alert("Ngày sinh không đúng định dạng !");
+                }
+            }
+        } while (!check)
+        check = false;
+
+        //
+        //
+        // Kiểm tra tính hợp lệ của email
+        let email;
+        do {
+            let countAt = 0;
+            let countDoc = 0;
+            email = prompt(" Nhập địa chỉ email theo định dạng :aaaa@gmail.com ");
+            for (let i = 0; i < email.length; i++) {
+                if (email.charAt(i) === "@") {
+                    countAt++;
+                }
+                for (let j = i + 1; j < email.length; j++) {
+                    if (email.charAt(i) === ".") {
+                        countDoc++;
+                    }
+                }
+            }
+            if (countAt != 1 || countDoc < 1) {
+                alert("Bạn nhập sai định dạng email !")
+            } else {
+                check = true;
+            }
+        } while (check == false);
+        check = false;
+        // Chọn địa chỉ
+        //
+        //
+
+        let diaChi;
+        let chooseAddress = prompt("Nhấn chọn địa chỉ khách hàng" +
+            +"\n Nhấn 1 chọn Đà Nẵng : "
+            + "\n Nhấn 2 để chọn Huế"
+            + "\n Nhấn 3 để chọn Quảng Nam"
+            + "\n Nhấn số khác để chọn tự nhập"
+        );
+
+        //chAdd tính giảm giá theo địa chỉ
+        switch (chooseAddress) {
+            case '1' :
+                diaChi = "Đà Nẵng";
+                break;
+            case '2' :
+                diaChi = "Huế";
+                break;
+            case '3' :
+                diaChi = "Quảng Nam";
+                break;
+            default :
+                diaChi = prompt("Nhập tỉnh cần nhập : ");
+        }
+
+        let loaiKhachHang;
+        let chCustomer = prompt("Nhấn chọn loại khách hàng"
+            + "\n Nhấn 1: Customer là Diamond "
+            + "\n Nhấn 2: Customer là Platium"
+            + "\n Nhấn 3: Customer là Gold"
+            + "\n Nhấn 4: Customer là Silver"
+            + "\n Nhấn 5: Customer là Member"
+        );
+        switch (chCustomer) {
+            case '1' :
+                loaiKhachHang = "Diamond";
+                break;
+            case '2' :
+                loaiKhachHang = "Platium";
+                break;
+            case '3' :
+                loaiKhachHang = "Gold";
+                break;
+            case '4' :
+                loaiKhachHang = "Silver";
+                break;
+            case '5' :
+                loaiKhachHang = "Member";
+                break;
+            default :
+                loaiKhachHang = alert("Loại khách hàng khác")
+        }
+        //
+        //
+        //
+        // định dạng giảm giá
+        let giamGia;
+        do {
+            giamGia = parseInt(prompt("Nhập giảm giá theo kiểu số nguyên : "));
+            if (!isNaN(giamGia)) {
+                giamGia = Number.parseFloat(giamGia);
+                check = true;
+            }
+            if (!check) {
+                alert("Giảm giá không phải là một số nguyên !");
+            }
+        } while (!check)
+        check = false;
+        //
+        //
+        //
+
+        let soLuong;
+        do {
+            soLuong = prompt("Số lượng khách hàng theo kiểu số nguyên : ");
+            if (!isNaN(soLuong)) {
+                soLuong = Number.parseFloat(soLuong);
+                check = true;
+            }
+            if (!check) {
+                alert("Số người đi kèm không phải là một số nguyên !");
+            }
+        } while (!check)
+        check = false;
+        //số ngày thuê
+        //
+        //
+        //
+        //
+        let ngayThue;
+        do {
+            ngayThue = parseInt(prompt("Nhập số ngày thuê theo kiểu số nguên : "));
+            if (!isNaN(ngayThue)) {
+                ngayThue = Number.parseFloat(ngayThue);
+                if (Number.isInteger(ngayThue)) {
+                    check = true;
+                }
+                if (!check) {
+                    alert("Ngày thuê không phải là số nguyên !");
+                }
+            }
+        } while (!check)
+        check = false;
+        // chọn loại dịch vụ
+        //
+        //
+        //
+        //
+        //
+        let loaiDichVu;
+        let chService = prompt("Nhấn 1: Villa"
+            + "\n Nhấn 2: House"
+            + "\n Nhấn 3: Room"
+        );
+        switch (chService) {
+            case '1':
+                loaiDichVu = "Villa";
+                break;
+            case '2':
+                loaiDichVu = "House";
+                break;
+            case '3':
+                loaiDichVu = "Room";
+                break;
+            default :
+                loaiDichVu = alert("Loại khác");
+        }
+        let loaiPhongThue = prompt("Nhập loại phòng thuê : ");
+        let khachHang = new Customer(ten, cmnd, birthday, email, diaChi, loaiKhachHang,
+            giamGia, soLuong, ngayThue, loaiDichVu, loaiPhongThue);
+        danhSachKH.push(khachHang);
+        hienThi(danhSachKH);
+    }
+
+    function hThi(i) {
+        document.getElementById("show").innerHTML = "1. Tên:" + danhSachKH[i].getTenKh() + "<br>" +
+            "2. CMND:" + danhSachKH[i].getCmndKH() + "<br>" +
+            "3. Ngày sinh:" + danhSachKH[i].getNgaySinhKH() + "<br>" +
+            "4. Địa chỉ:" + danhSachKH[i].getDiaChi() + "<br>" +
+            "5. Tổng tiền:" + danhSachKH[i].getTongTien()
+    }
+
+
+    function suaThongTinNV(i) {
+        let choose = prompt("Chọn thông tin cần sửa" +
+            "\n 1. Sửa tên " +
+            "\n 2. Sửa  ngày sinh " +
+            "\n 3. Sửa CMND" +
+            "\n 4. Sửa địa chỉ" +
+            "\n 5. Thoát !"
+        )
+        switch (choose) {
+            case '1':
+                let ten = prompt("Nhap lại tên mới :");
+                danhSachKH[i].setTenKH(ten);
+                suaThongTinNV(i);
+                break;
+            case '2':
+                let ngaySinh = prompt("Nhap lại ngày sinh mới :");
+                danhSachKH[i].setNgaySinhKH(ngaySinh);
+                suaThongTinNV(i);
+                break;
+            case '3':
+                let cmnd = prompt("Nhap lại CMND mới :");
+                danhSachKH[i].setCmndKH(cmnd);
+                suaThongTinNV(i);
+                break;
+            case '4':
+                let diaChi = prompt("Nhap lại địa chỉ mới :");
+                danhSachKH[i].setDiaChiKH(diaChi);
+                suaThongTinNV(i);
+                break;
+            case '5':
+                hienThi(danhSachKH);
+                break;
+        }
+    }
+
+
+    function xoaNV(i) {
+        let check = confirm("Bạn có chắc chắn xóa nhân viên !");
+        if (check) {
+            danhSachKH.splice(danhSachKH[i], 1);
+        } else alert("Bạn không muốn xóa nhân viên này. Cảm ơn !");
+        hienThi(danhSachKH);
+    }
+
+    function sapXep(arr) {
+        arr.sort(function (a, b) {
+            let tenA = a.tenKH;
+            let tenB = b.tenKH;
+            if (tenA < tenB) {
+                return -1;
+            } else if (tenA > tenB) {
+                return 1
+            } else {
+                return 0;
+            }
+        })
+        return arr;
+    }
+
+    function addEmployee() {
+        // thêm tên
+        let tenNV = prompt("Nhập tên nhân viên : ");
+        let ten = " ";
+        tenNV.trim().toLowerCase();
+        for (let i = 0; i < tenNV.length; i++) {
+            if (i === 0 || tenNV.charAt(i - 1) === " ") {
+                ten += tenNV.charAt(i).toUpperCase();
+                continue;
+            }
+            if (tenNV.charAt(i) === " " && tenNV.charAt(i + 1) === " ") {
+                continue;
+            } else {
+                ten += tenNV.charAt(i)
+            }
+        }
+        let cmnd = prompt("Nhập CMND :");
+        let ngaySinh = prompt("Nhâp ngày sinh : ")
+        let email = prompt("Nhâp email : ")
+        let diaChi = prompt("Nhâp địa chỉ : ")
+        let chucVu;
+        let choose = prompt("Nhấn chọn chức vụ :" +
+            "\n 1. Manager" +
+            "\n 2. Sale" +
+            "\n 3. Marketing"
+        );
+        switch(choose){
+            case '1':
+                chucVu = "Manager";
+                break;
+            case '2':
+                chucVu = "Sale";
+                break;
+            case '3':
+                chucVu = "Marketing";
+                break;
+        }
+        let nhanVien = new Employee(ten,cmnd,ngaySinh,email,diaChi,chucVu);
+        danhSachNV.push(nhanVien);
+       hienThiNhanVien(danhSachNV);
+    }
+
+    function hienThiNhanVien(danhSach) {
+        let a = [];
+        for (let i = 0;i<danhSach.length;i++){
+           a += danhSach[i].getInfo()+"<br>"
+        }
+        document.getElementById("nhanVien").innerHTML = a;
+    }
+</script>
+</body>
+</html>

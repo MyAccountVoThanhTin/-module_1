@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu so , mau so</title>
+</head>
+<body>
+    <script>
+        class PhanSo {
+            constructor() {
+                this.tuso = 0;
+                this.mauso = 0;
+            }
+            getTuSo(){
+                return this.tuso;
+            }
+            getMauSo(){
+                return this.mauso;
+            }
+            setTuSoMauSo(tu,mau){
+                this.tuso = tu;
+                this.mauso = mau;
+            }
+            cong(){
+                return this.tuso + this.mauso;
+            }
+            tru(){
+                return this.tuso - this.mauso;
+            }
+            nhan(){
+                return this.tuso * this.mauso;
+            }
+            chia(){
+                return this.tuso / this.mauso;
+            }
+        }
+        let tu = parseInt(prompt("nhap tu so : "));
+        let mau = parseInt(prompt("nhap mau so : "));
+        let phanSo = new PhanSo()
+        phanSo.setTuSoMauSo(tu,mau);
+        alert(phanSo.cong());
+        alert(phanSo.tru());
+        alert(phanSo.nhan());
+        alert(phanSo.chia());
+    </script>
+</body>
+</html>
