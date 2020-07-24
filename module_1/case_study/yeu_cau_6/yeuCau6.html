@@ -220,7 +220,7 @@
                 '        <td> ' + danhSach[i].getTongTien() + '</td>\n' +
                 '        <td> <input type="button" value="sửa" onclick="suaThongTinNV(' + i + ')"></td>\n' +
                 '        <td> <input type="button" value="xóa" onclick="xoaNV(' + i + ');"></td>\n' +
-                '        <td> <input type="button" value="Hiển Thị" onmouseover="hThi(' + i + ');"></td>\n' +
+                '        <td> <input type="button" value="Hiển Thị" onmouseover="hThi(' + i + ');" onmouseout="hien('+ i +')"></td>\n' +
                 '    </tr>';
         }
         bang += '</table>';
@@ -449,6 +449,9 @@
             "3. Ngày sinh:" + danhSachKH[i].getNgaySinhKH() + "<br>" +
             "4. Địa chỉ:" + danhSachKH[i].getDiaChi() + "<br>" +
             "5. Tổng tiền:" + danhSachKH[i].getTongTien()
+    }
+    function hien() {
+        document.getElementById("show").innerText = " ";
     }
 
 
