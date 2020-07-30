@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhap so phan tu cua mang ");
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("Phan tu thu " + (i + 1) + "la : ")
+    }
+
+    function tryRemoveFromArray(arr1) {
+        let x = prompt("nhap gia tri x can tim : ");
+        let temp = arr1.length;
+        for (let j = 0; j < temp; j++) {
+            if (x === arr1[j]) {
+                arr1 = arr1.splice(j, 1);
+                return true;
+                break;
+            } else {
+                continue;
+            }
+        }
+    }
+
+    if (tryRemoveFromArray(arr)) {
+        document.writeln("mang sau khi cat la " + arr);
+    } else {
+        document.writeln("gia tri x khong duoc tim thay trong mang " + arr);
+    }
+</script>
+</body>
+</html>

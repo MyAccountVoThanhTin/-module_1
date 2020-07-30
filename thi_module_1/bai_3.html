@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isFibonacci(n) {
+        let arr = [];
+        let n1 = 0;
+        let n2 = 1;
+        arr.push(n1);
+        arr.push(n2);
+        let n3;
+        for (let i = 2; i < n; i++) {
+            n3 = n1 + n2;
+            arr.push(n3);
+            n1 = n2;
+            n2 = n3;
+        }
+        return arr;
+    }
+
+    function check(arr1) {
+        let x = parseInt(prompt("nhap so can kiem tra : "));
+        let temp = arr1.length;
+        for (let i = 0; i < temp; i++) {
+            if (x === arr1[i]) {
+                return true;
+            } else {
+                continue;
+            }
+        }
+
+    }
+
+    let n = prompt("nhap day n :");
+    let arr3 = isFibonacci(n);
+    alert(arr3);
+    let result = check(arr3);
+    let kq;
+    if (result) {
+        kq = true
+    } else {
+        kq = false;
+    }
+    alert(kq);
+</script>
+</body>
+</html>

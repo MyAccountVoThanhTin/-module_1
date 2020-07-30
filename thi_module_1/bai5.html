@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhap so mon thi : ");
+    let arr = new Array(n);
+    for (let i = 0;i<n;i++){
+        arr[i] = parseInt(prompt("mon thu "+(i+1)+"la : "));
+    }
+    function finMax(arr1) {
+        let max = arr1[0];
+        let temp = 0;
+        for (let  i = 1 ; i< arr1.length;i++){
+            if(max < arr1[i]){
+                max = arr1[i];
+                temp = i;
+            }
+        }
+        let temp2 = 0;
+        for (let j =arr1.length ;j > temp;j--){
+            if(max === arr1[j]){
+                temp2 = j+1;
+                break;
+            }
+        }
+        return max +" "+ temp2;
+    }
+   alert(finMax(arr));
+</script>
+</body>
+</html>
